@@ -7,6 +7,7 @@ var router = express.Router();
 
 
 
+
 router.get( '/auth/facebook',
 		passport.authenticate( 'facebook', {
 			state: 'SOME STATE'
@@ -23,5 +24,6 @@ router.get( '/auth/facebook',
 				// Successful authentication, redirect home.
 				res.redirect( '/' );
 			} );
+
 
 		module.exports = router;
