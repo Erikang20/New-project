@@ -2,9 +2,16 @@ exports.up = function( knex, Promise ) {
 
 	return knex.schema.createTable( 'users', function( table ) {
 		table.increments();
-		table.string( 'name' );
+		table.string( 'full_name' );
 		table.string( 'userName' );
-		table.timestamp( 'created_at' ).defaultTo( knex.fn.now() );
+		table.string( 'email' );
+		table.string( 'password' );
+		table.string( 'about_me' );
+		table.string( 'img' );
+		table.string( 'rating' );
+		table.boolean( 'isAdmin' );
+		table.date( 'date_available_start' );
+		table.date( 'date_available_end' );
 
 	} );
 
