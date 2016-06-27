@@ -54,16 +54,6 @@ passport.deserializeUser( function( obj, done ) {
 
 
 
-// -------------------------------
-// routes
-// -------------------------------
-
-var auth = require( './routes/auth' );
-var routes = require( './routes/index' );
-var users = require( './routes/users' );
-
-
-
 // ---------------------------------
 // Facebook Strategy
 // ---------------------------------
@@ -87,13 +77,9 @@ passport.use( new FacebookStrategy( {
 ) );
 
 
-app.use( '/auth', auth );
-app.use( '/', routes );
-app.use( '/users', users );
-
 
 // ---------------------------------
-// Configure Passport authenticated session persistence.
+// Configure Passport authenticated session persistence for Facebook.
 // ---------------------------------
 
 passport.serializeUser( function( user, cb ) {
@@ -103,6 +89,28 @@ passport.serializeUser( function( user, cb ) {
 passport.deserializeUser( function( obj, cb ) {
 	cb( null, obj );
 } );
+
+
+// -------------------------------
+// routes
+// -------------------------------
+
+var auth = require( './routes/auth' );
+var routes = require( './routes/index' );
+var users = require( './routes/users' );
+
+
+app.use( '/auth', auth );
+app.use( '/', routes );
+app.use( '/users', users );
+
+
+app.get( '/', function( req, res ) {
+	res.render( 'index', {
+		user: req.user
+	} );
+} );
+
 
 
 // -------------------------------
