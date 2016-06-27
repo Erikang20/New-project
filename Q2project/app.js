@@ -12,7 +12,6 @@ var methodOverride = require( 'method-override' );
 var app = express();
 
 require( 'dotenv' ).load();
-//WHATEVER
 
 // -------------------------------
 // view engine setup
@@ -69,8 +68,8 @@ var users = require( './routes/users' );
 
 
 passport.use( new FacebookStrategy( {
-		clientID: FACEBOOK_APP_ID,
-		clientSecret: FACEBOOK_APP_SECRET,
+		clientID: process.env.FACEBOOK_APP_ID,
+		clientSecret: process.env.FACEBOOK_APP_SECRET,
 		callbackURL: "http://localhost:3000/auth/facebook/callback",
 		scope: [ 'r_emailaddress', 'r_basicprofile' ],
 
