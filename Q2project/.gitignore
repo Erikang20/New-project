@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 test3.txt
 .env
+.DS_Store
 # Runtime data
 pids
 *.pid
