@@ -9,21 +9,21 @@ var router = express.Router();
 
 
 router.get( '/auth/facebook',
-		passport.authenticate( 'facebook', {
-			state: 'SOME STATE'
-		} ),
-		function( req, res
+	passport.authenticate( 'facebook', {
+		state: 'SOME STATE'
+	} ),
+	function( req, res ) {
 
-		);
+	} );
 
-		router.get( '/auth/facebook/callback',
-			passport.authenticate( 'facebook', {
-				failureRedirect: '/login'
-			} ),
-			function( req, res ) {
-				// Successful authentication, redirect home.
-				res.redirect( '/' );
-			} );
+router.get( '/auth/facebook/callback',
+	passport.authenticate( 'facebook', {
+		failureRedirect: '/login'
+	} ),
+	function( req, res ) {
+		// Successful authentication, redirect home.
+		res.redirect( '/' );
+	} );
 
 
-		module.exports = router;
+module.exports = router;
