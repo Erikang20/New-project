@@ -1,11 +1,10 @@
-exports.seed = function ( knex, Promise ) {
+exports.seed = function( knex, Promise ) {
 	// Deletes ALL existing entries
 	return knex( 'dogs' ).del()
-		.then( function () {
+		.then( function() {
 			return Promise.all( [
 				// Inserts seed entries
 				knex( 'dogs' ).insert( {
-					id: 1,
 					name: 'Iris',
 					age: 12,
 					breed: 'corgi',
@@ -16,7 +15,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 1
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 2,
 					name: 'Barky',
 					age: 3,
 					breed: 'Golden Lab',
@@ -27,7 +25,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 2
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 3,
 					name: 'Woofy',
 					age: 2,
 					breed: 'Pug',
@@ -38,7 +35,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 3
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 4,
 					name: 'McWoof',
 					age: 12,
 					breed: 'St. Bernard',
@@ -49,7 +45,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 4
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 5,
 					name: 'Zenbarka',
 					age: 3,
 					breed: 'Golden Lab',
@@ -60,7 +55,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 5
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 6,
 					name: 'Mei',
 					age: 2,
 					breed: 'Siberian Husky',
@@ -71,7 +65,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 6
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 7,
 					name: 'Winston',
 					age: 12,
 					breed: 'Pug',
@@ -82,7 +75,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 7
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 8,
 					name: 'Mercy',
 					age: 3,
 					breed: 'Golden Lab',
@@ -93,7 +85,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 8
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 9,
 					name: 'Lucio',
 					age: 2,
 					breed: 'Pug',
@@ -104,7 +95,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 9
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 10,
 					name: 'Woofbjorn',
 					age: 12,
 					breed: 'corgi',
@@ -115,7 +105,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 10
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 11,
 					name: 'Rhinebark',
 					age: 3,
 					breed: 'Black Lab',
@@ -126,7 +115,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 11
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 12,
 					name: 'Roaddog',
 					age: 2,
 					breed: 'corgi',
@@ -137,7 +125,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 12
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 13,
 					name: 'Iris',
 					age: 12,
 					breed: 'corgi',
@@ -148,7 +135,6 @@ exports.seed = function ( knex, Promise ) {
 					owner: 13
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 14,
 					name: 'Barky',
 					age: 3,
 					breed: 'Golden Lab',
@@ -156,10 +142,9 @@ exports.seed = function ( knex, Promise ) {
 					description: 'Generic Golden Lab Description',
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
-					owner: 2
+					owner: 14
 				} ),
 				knex( 'dogs' ).insert( {
-					id: 15,
 					name: 'Woofy',
 					age: 2,
 					breed: 'Pug',

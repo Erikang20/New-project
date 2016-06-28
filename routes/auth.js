@@ -22,6 +22,7 @@ router.get( '/auth/facebook/callback',
 	} ),
 	function( req, res ) {
 		// Successful authentication, redirect home.
+		console.log( "Oh god" );
 		res.redirect( '/' );
 	} );
 //
