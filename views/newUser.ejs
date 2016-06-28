@@ -107,37 +107,43 @@
 <h1 class="newusertitle">Welcome new user</h1>
 
   <div class="row newUser">
-    <form class="form" action="/newUser" method="POST">
+    <fieldset>
+      <form class="form" action="/newUser" method="POST">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons">face</i>
-          <input placeholder="Placeholder" id="full_name" type="text" class="validate">
           <label for="full_name">Full Name</label>
+          <input placeholder="Placeholder" id="full_name" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
           <i class="material-icons">account_circle</i>
-          <input id="userName" type="text" class="validate">
           <label for="userName">User Name</label>
+          <input id="userName" type="text" class="validate">
         </div>
       </div>
 
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons">lock</i>
-        <input id="password" type="password" class="validate">
         <label for="password">Password</label>
+        <input id="password" type="password" class="validate">
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons">email</i>
-        <input id="email" type="email" class="validate">
         <label for="email">Email</label>
+        <input id="email" type="email" class="validate">
       </div>
     </div>
-  </form>
+    <button class="btn waves-effect waves-light newUserButton" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+
+    </form>
+  </fieldset>
 </div>
 
 
