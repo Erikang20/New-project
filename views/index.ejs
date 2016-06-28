@@ -32,6 +32,9 @@
 
       <%# bootstrap%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+      <%# fontawesome%>
+      <script src="https://use.fontawesome.com/405a0adae2.js"></script>
   </head>
 
 
@@ -102,9 +105,9 @@
 <section class="parallax-container" style="opacity: 1; transform: translateY(25px);">
   <div class="parallax-window" data-parallax="scroll" </div>
     <data-img src="https://images.unsplash.com/photo-1414277578841-112f6e9398ec?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375">
-    <div class="parallax-slider">
+    <%# <div class="parallax-slider">%>
       <span class="inspired" style="position:absolute; top: 300px; left: 200px;">Inspired by friends who take care of your dog</span>
-    </div>
+    <%# </div>%>
 </section>
 
 
@@ -156,6 +159,7 @@
 <%# The team%>
 <%# ===================================%>
 
+
   <div id="theTeam">
     <div class="container-fluid">
         <div class="row">
@@ -194,9 +198,39 @@
                                   </div>
                                 </div>
                               </div>
-                  </div>
-                </div>
-              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+<%# ===================================%>
+<%# Social section%>
+<%# ===================================%>
+
+
+<section id="social" class="parallax">
+  <div class="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="sec-title text-center red wow animated fadeInDown">
+          <h2 class="followUs">FOLLOW US</h2>
+        </div>
+
+        <ul class="social-button">
+          <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-2x"></i></a></li>
+          <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-2x"></i></a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ===================================%>
+<%# end Social section %>
+<%# ===================================%>
+
 
 <%# ===================================%>
 <%# Footer%>
