@@ -5,8 +5,8 @@ var methodOverride = require( 'method-override' );
 var bodyParser = require( 'body-parser' );
 
 /* GET home page. */
-router.get( '/', function( req, res, next ) {
-	knex( 'users' ).select().then( function( result, err ) {
+router.get( '/', function ( req, res, next ) {
+	knex( 'users' ).select().then( function ( result, err ) {
 		res.render( 'index', {
 			user: result
 
@@ -14,7 +14,7 @@ router.get( '/', function( req, res, next ) {
 	} );
 } );
 
-router.get( '/', function( req, res, next ) {
+router.get( '/', function ( req, res, next ) {
 	res.cookie( 'views', parseInt( req.cookies.views || 0 ) + 1 );
 
 	res.render( 'index', {

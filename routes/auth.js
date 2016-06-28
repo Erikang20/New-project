@@ -11,7 +11,7 @@ router.get( '/auth/facebook',
 	passport.authenticate( 'facebook', {
 		state: 'SOME STATE'
 	} ),
-	function( req, res ) {
+	function ( req, res ) {
 
 	} );
 
@@ -19,7 +19,7 @@ router.get( '/auth/facebook/callback',
 	passport.authenticate( 'facebook', {
 		failureRedirect: '/login'
 	} ),
-	function( req, res ) {
+	function ( req, res ) {
 		// Successful authentication, redirect home.
 		res.redirect( '/' );
 	} );
