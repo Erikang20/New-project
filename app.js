@@ -11,12 +11,16 @@ var passport = require( 'passport' );
 var pg = require( 'pg' );
 var knex = require( './db/knex' );
 var FacebookStrategy = require( 'passport-facebook' ).Strategy;
+<<<<<<< HEAD
 var auth = require( './routes/auth' );
 var routes = require( './routes/index' );
 var users = require( './routes/users' );
 var login = require( './routes/login' );
 var profile = require( './routes/profile' );
 var newUser = require( './routes/newUser' );
+=======
+var knex = require( 'knex' );
+>>>>>>> d858503eb69b840434e63f38bbc7ba332c4e340c
 var app = express();
 
 

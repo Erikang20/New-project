@@ -11,6 +11,9 @@
    <%# css stylesheet%>
    <link href="/main.css" rel="stylesheet" type="text/css">
 
+   <%# google Fonts%>
+   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans" rel="stylesheet">
+
     <title>Puppylink</title>
 
     <%# jquery before everything%>
@@ -19,42 +22,68 @@
       <%# js%>
      <script type="text/javascript" src="./main.js"></script>
 
-    <%# parallax %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/parallax.js-1.4.2/parallax.js"></script>
 
     <%# materialize %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 		<script src="/main.js"></script>
 
 
+    <%# Google Icons%>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+      <%# bootstrap%>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+      <%# fontawesome%>
+      <script src="https://use.fontawesome.com/405a0adae2.js"></script>
   </head>
 
 
   <body>
 
-<%# -------------------------------%>
+<%# ===================================%>
+<%# preloader %>
+<%# ===================================%>
+
+  <div id="preloader">
+    <div class="loder-box">
+      <div class="battery"></div>
+        </div>
+      </div>
+
+<%# ===================================%>
+<%# end preloader%>
+<%# ===================================%>
+
+
+
+<%# ===================================%>
 <%# header%>
-<%# -------------------------------%>
+<%# ===================================%>
 
-<header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-        <nav class="collapse navbar-collapse navbar-right" role="navigation">
-        <div class="container">
-          <div class="navbar-header scrollContainer destination0">
-
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+    <div class="container">
+      <div class="navbar-header scrollContainer destination0">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+<<<<<<< HEAD
           </button>
             <h1 class="logoName">PuppyLink</h1>
           </div>
+=======
+              </button>
+                <h1 class="logoName">PuppyLink</h1>
+                  </div>
+>>>>>>> d858503eb69b840434e63f38bbc7ba332c4e340c
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# main nav %>
-<%# -------------------------------%>
+<%# ===================================%>
 
   <nav class="collapse navbar-collapse navbar-right" role="navigation">
       <ul id="nav" class="nav navbar-nav">
@@ -64,45 +93,195 @@
           <li class="nav-item"><a class="navbar-link support transition" href="#contactIndex">Contact Us</a></li>
           <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
         </ul>
+<<<<<<< HEAD
   </nav>
 <%# -------------------------------%>
+=======
+      </nav>
+<%# ===================================%>
+>>>>>>> d858503eb69b840434e63f38bbc7ba332c4e340c
 <%# End of main nav %>
-<%# -------------------------------%>
+<%# ===================================%>
 
       </div>
    </header>
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# end of the header and top navigation%>
-<%# -------------------------------%>
+<%# ===================================%>
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# parallax section%>
-<%# -------------------------------%>
+<%# ===================================%>
 
+  <section class="content-holder" style="opacity: 1; transform: translateY(25px);">
+      <div class="parallax-window" data-parallax="scroll"></div>
+        <div class="parallax-slider">
+          </div>
+        </section>
+
+<<<<<<< HEAD
 <section class="content-holder" style="opacity: 1; transform: translateY(25px);">
   <div class="parallax-window" data-parallax="scroll"></div>
     <div class="parallax-slider" data-parallax="scroll">
       <span class="inspired" style="position:absolute; top: 300px; left: 200px;">Inspired by friends who take care of your dog</span>
+=======
+
+<%# ===================================%>
+<%# About Us%>
+<%# ===================================%>
+
+<section id="aboutUs" >
+      <div class="container">
+          <%# <div class="col-md-8 wow animated fadeInLeft scrollContainer destination25">%>
+            <a class="aboutTitle animated infinite jello">About us</a>
+              <div class="content">
+                <p class="middleContent">
+                You can easily find places to board your dog per night, and people who would watch the dog in their house for almost the same amount of money than comun boarding place.
+                However, as a dog parent I can’t help but wonder how people can really trust on the reviews that you find in their website that other people had posted about this place or that person who took care of your dog.
+                The dog certainly can’t tell you if someone on the house/place was mean to him/her. He can’t let you know if he/she got his walk or if he/she was or not on the crate the whole day.
+                That’s why this website is about creating a trustworthy networking of dog boarding and puppy play date that involve your friends and people that you know and trust to take care of your dog.</p>
+
+                <p class="middleContent"> Creating a connection with your friends on Facebook, you can decide to add friends who have dogs or that don’t have dogs but they would love to take care of them while you are away.
+                You can also create a personal profile for you and your dog, and add a list of preferences where you can describe everything about your dog, preferences on food, treats, toys, places to go off leash.
+                In addition, you can find a social calendar with puppy friendly activities around town, take him/her for a walk, grab a beer with your friends, or if you prefer arrange a puppy play date with other dog’s that have similar characteristics than your dog and are also in the puppy networking.
+                </p>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+        <%# </div>%>
+    </section>
+
+<%# ===================================%>
+<%# End of about us%>
+<%# ===================================%>
+
+
+
+<%# ===================================%>
+<%# parallax middle section %>
+<%# ===================================%>
+
+  <section class="content-holder" style="opacity: 1; transform: translateY(25px);">
+      <div class="parallax-window parallaxMiddle" data-parallax="scroll"></div>
+        <div class="parallax-slider">
+          </div>
+        </section>
+
+
+<%# ===================================%>
+<%# The team%>
+<%# ===================================%>
+
+
+  <div id="theTeam">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sec-title text-center">
+                <h1 class="wow animated bounceInLeft team">The team</h1>
+                    </div>
+
+                        <div class="col-sm-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                          <div class="thumbnail">
+                            <img id="jack" src="./img/jack.jpg" class="img-responsive" alt="Responsive image">
+                              <h1 class="jack">Jackson</h1>
+                                <p class="history">Hey there, my name is Jackson and I'm a Schnoodle, I'm 2 and a half years old, and I love kisses and hugs.
+                                My parents adopted me two years ago and I am a very happy dog. I love to play with the ball, eat and take naps.
+                                I hope that you want to play with me and I'd love to meet other dogs.</p>
+                          </div>
+                        </div>
+
+                          <div class="col-sm-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                            <div class="thumbnail">
+                              <div class="erika">
+                                <img id="erika" src="./img/DSC_0073.jpg" class="img-responsive" alt="responsive image">
+                                  <h1 class="jack">Erika</h1>
+                                    <p class="history">Hi, I'm Erika, I am from Bogota Colombia, and I moved almost two years ago to Austin. I'm currently studying Web Development in Galvanize Austin and I love it.</p>
+                                      <p class="history">I love my family and my dog. I love to travel and visit new cities, and rigth now I am ready for my next adventure.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                              <div class="col-sm-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.10s">
+                                <div class="thumbnail">
+                                  <div class="Aaron">
+                                    <img id="Aaron" src="#" class="img-responsive" alt="responsive image">
+                                      <h1 class="jack">Aaron</h1>
+                                        <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+<%# ===================================%>
+<%# Social section%>
+<%# ===================================%>
+
+
+<section id="social" class="parallax">
+  <div class="overlay">
+    <div class="container">
+      <div class="row">
+        <div class="sec-title text-center red wow animated fadeInDown">
+          <h2 class="followUs">FOLLOW US</h2>
+        </div>
+
+        <ul class="social-button">
+          <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-2x"></i></a></li>
+          <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-2x"></i></a></li>
+        </ul>
+
+      </div>
+>>>>>>> d858503eb69b840434e63f38bbc7ba332c4e340c
     </div>
+  </div>
 </section>
 
-
-<%# ----------------------------------%>
-<%# About Us%>
-<%# ----------------------------------%>
-
+<%# ===================================%>
+<%# end Social section %>
+<%# ===================================%>
 
 
+<%# ===================================%>
+<%# Footer%>
+<%# ===================================%>
+
+    <footer class="footer">
+      <nav class="nav navbar-inverse">
+        <div class="footer-social">
+          <ul>
+            <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+              <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
+                <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
+                  </ul>
+
+<<<<<<< HEAD
 <h2 id="About Us">About Us</h2>
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+=======
+                  <p class="copyright">Copyright &copy; 2016 Design and Developed By Erika Angarita and Aaron Levinson</p>
+                        </div>
+                    </nav>
+                </footer>
 
+<%# ===================================%>
+
+>>>>>>> d858503eb69b840434e63f38bbc7ba332c4e340c
+
+<%# parallax %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/parallax.js-1.4.2/parallax.js"></script>
 
   </body>
 </html>

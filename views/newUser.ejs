@@ -19,14 +19,19 @@
       <%# js%>
      <script type="text/javascript" src="./main.js"></script>
 
-    <%# parallax %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/parallax.js-1.4.2/parallax.js"></script>
 
     <%# materialize %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
-		
+    <%# bootstrap%>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <%# Google Icons%>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <%# fontawesome%>
+    <script src="https://use.fontawesome.com/405a0adae2.js"></script>
 
   </head>
 
@@ -35,103 +40,136 @@
 <body id="newUser">
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# header%>
-<%# -------------------------------%>
+<%# ===================================%>
 
-<header id="navigation" class="nav-wrapper navbar-fixed-top animated-header">
-  <div class="container">
-    <div class="navbar-header scrollContainer destination0">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+        <div class="container">
+          <div class="navbar-header scrollContainer destination0">
 
-          <h1 class="logoName">PuppyLink</h1>
-            </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+            <h1 class="logoName">PuppyLink</h1>
+          </div>
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# main nav %>
-<%# -------------------------------%>
+<%# ===================================%>
 
-
-    <nav class="collapse navbar-collapse navbar-right" role="navigation">
-        <ul id="nav" class="nav navbar-nav">
+  <nav class="collapse navbar-collapse navbar-right" role="navigation">
+      <ul id="nav" class="nav navbar-nav">
           <li class="nav-item"><a class= "navbar-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="navbar-link" href="#aboutUs">About us</a></li>
+          <li class="nav-item"><a class="navbar-link" href="/">About us</a></li>
           <li class="nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
           <li class="nav-item"><a class="navbar-link support transition" href="#contactIndex">Contact Us</a></li>
           <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
         </ul>
       </nav>
 
-<%# -------------------------------------------%>
+<%# ===================================%>
 <%# End of main nav %>
-<%# -------------------------------------------%>
+<%# ===================================%>
 
   </div>
 </header>
 
 
-<%# -------------------------------------------%>
+<%# ===================================%>
 <%# end of the header and top navigation%>
-<%# -------------------------------------------%>
+<%# ===================================%>
 
-<h1>Login</h1>
+
+<%# ===================================%>
+<%# parallax section%>
+<%# ===================================%>
+
+<section class="parallax-container" style="opacity: 3; transform: translateY(25px);">
+  <div class="parallax-window" data-parallax="scroll" </div>
+    <data-img src="https://images.unsplash.com/photo-1414277578841-112f6e9398ec?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375">
+    <%# <div class="parallax-slider">%>
+      <span class="inspired" style="position:absolute; top: 300px; left: 200px;">Inspired by friends who take care of your dog</span>
+    <%# </div>%>
+</section>
+
+
+<%# ===================================%>
+<%# login session%>
+<%# ===================================%>
+
+
+<h1 class="newusertitle">Welcome new user</h1>
 
   <div class="row newUser">
-    <form class="col s12">
+    <fieldset>
+      <form class="form" action="/newUser" method="POST">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Placeholder" id="full_name" type="text" class="validate">
+          <i class="material-icons">face</i>
           <label for="full_name">Full Name</label>
+          <input placeholder="Placeholder" id="full_name" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input id="userName" type="text" class="validate">
+          <i class="material-icons">account_circle</i>
           <label for="userName">User Name</label>
+          <input id="userName" type="text" class="validate">
         </div>
       </div>
 
-
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
+        <i class="material-icons">lock</i>
         <label for="password">Password</label>
+        <input id="password" type="password" class="validate">
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
+        <i class="material-icons">email</i>
         <label for="email">Email</label>
+        <input id="email" type="email" class="validate">
       </div>
     </div>
-  </form>
+    <button class="btn waves-effect waves-light newUserButton" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+
+    </form>
+  </fieldset>
 </div>
 
-<%# ----------------------------------%>
+
+<%# ===================================%>
 <%# Footer%>
-<%# ----------------------------------%>
+<%# ===================================%>
 
-<footer class="footer">
-    <nav class="nav navbar-inverse">
-      <div class="footer-social">
-        <ul>
-          <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
-            <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
-              <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
-            </ul>
+    <footer class="footer">
+      <nav class="nav navbar-inverse">
+        <div class="footer-social">
+          <ul>
+            <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+              <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
+                <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
+                  </ul>
 
-              <p class="copyright">Copyright &copy; 2016 Design and Developed By Erika Angarita</p>
-          </div>
-      </nav>
-  </footer>
-<%# ----------------------------------%>
+                  <p class="copyright">Copyright &copy; 2016 Design and Developed By Erika Angarita and Aaron Levinson</p>
+                        </div>
+                    </nav>
+                </footer>
 
+<%# ===================================%>
+
+<%# parallax %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/parallax.js-1.4.2/parallax.js"></script>
 
   </body>
 </html>
