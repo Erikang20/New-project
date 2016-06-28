@@ -43,12 +43,12 @@ app.use( cookieSession( {
 app.use( passport.initialize() );
 app.use( passport.session() );
 
-passport.serializeUser( function ( user, done ) {
+passport.serializeUser( function( user, done ) {
 	//later this will be where you selectively send to the browser an identifier for your user, like their primary key from the database, or their ID from linkedin
 	done( null, user );
 } );
 
-passport.deserializeUser( function ( obj, done ) {
+passport.deserializeUser( function( obj, done ) {
 	//here is where you will go to the database and get the user each time from it's id, after you set up your db
 	done( null, obj );
 } );
@@ -64,14 +64,14 @@ passport.use( new FacebookStrategy( {
 		clientID: process.env.FACEBOOK_APP_ID,
 		clientSecret: process.env.FACEBOOK_APP_SECRET,
 		callbackURL: "http://localhost:3000/auth/facebook/callback",
-		scope: [ 'r_emailaddress', 'r_basicprofile' ],
+		// scope: [ 'r_emailaddress', 'r_basicprofile' ],
 		enableProof: true
 
 	},
-	function ( accessToken, refreshToken, profile, cb ) {
+	function( accessToken, refreshToken, profile, cb ) {
 		User.findOrCreate( {
 			facebookId: profile.id
-		}, function ( err, user ) {
+		}, function( err, user ) {
 			return cb( err, user );
 		} );
 	}
@@ -83,11 +83,11 @@ passport.use( new FacebookStrategy( {
 // Configure Passport authenticated session persistence for Facebook.
 // ---------------------------------
 
-passport.serializeUser( function ( user, cb ) {
+passport.serializeUser( function( user, cb ) {
 	cb( null, user );
 } );
 
-passport.deserializeUser( function ( obj, cb ) {
+passport.deserializeUser( function( obj, cb ) {
 	cb( null, obj );
 } );
 
@@ -117,41 +117,38 @@ app.use( '/newUser', newUser );
 // ---------------------------
 
 
-app.get( '/', function ( req, res ) {
+app.get( '/', function( req, res ) {
 	res.render( 'index', {
 		user: req.user
 	} );
 } );
 
-app.get( '/login',
-	function ( req, res ) {
-		res.render( 'login' );
+app.get( '/auth',
+	function( req, res ) {
+		res.render( 'auth' );
 	} );
 
-app.get( '/login/facebook',
-	passport.authenticate( 'facebook' ) );
+app.get( '/auth/facebook',
+	passport.authenticate( 'facebook' )
+);
 
-app.get( '/login/facebook/return',
+
+// CALLBACK URL
+// localhost:3000/login/facebook/return
+app.get( '/auth/facebook/callback',
 	passport.authenticate( 'facebook', {
-		failureRedirect: '/login'
+		failureRedirect: '/auth'
 	} ),
-	function ( req, res ) {
+	function( req, res ) {
 		res.redirect( '/' );
 	} );
 
-// app.get( '/profile',
-// 	require( 'connect-ensure-login' ).ensureLoggedIn(),
-// 	function( req, res ) {
-// 		res.render( 'profile', {
-// 			user: req.user
-// 		} );
-// 	} );
 
 
 // -------------------------------
 
 var port = process.env.PORT || 3000;
-app.listen( port, function () {
+app.listen( port, function() {
 	console.log( "Im listening yo!" );
 } );
 
