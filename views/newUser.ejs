@@ -29,6 +29,10 @@
     <%# bootstrap%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+    <%# Google Icons%>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <%# fontawesome%>
     <script src="https://use.fontawesome.com/405a0adae2.js"></script>
 
@@ -39,9 +43,9 @@
 <body id="newUser">
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# header%>
-<%# -------------------------------%>
+<%# ===================================%>
 
 <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
         <div class="container">
@@ -58,9 +62,9 @@
           </div>
 
 
-<%# -------------------------------%>
+<%# ===================================%>
 <%# main nav %>
-<%# -------------------------------%>
+<%# ===================================%>
 
   <nav class="collapse navbar-collapse navbar-right" role="navigation">
       <ul id="nav" class="nav navbar-nav">
@@ -72,17 +76,36 @@
         </ul>
       </nav>
 
-<%# -------------------------------------------%>
+<%# ===================================%>
 <%# End of main nav %>
-<%# -------------------------------------------%>
+<%# ===================================%>
 
   </div>
 </header>
 
 
-<%# -------------------------------------------%>
+<%# ===================================%>
 <%# end of the header and top navigation%>
-<%# -------------------------------------------%>
+<%# ===================================%>
+
+
+<%# ===================================%>
+<%# parallax section%>
+<%# ===================================%>
+
+<section class="parallax-container" style="opacity: 3; transform: translateY(25px);">
+  <div class="parallax-window" data-parallax="scroll" </div>
+    <data-img src="https://images.unsplash.com/photo-1414277578841-112f6e9398ec?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375">
+    <%# <div class="parallax-slider">%>
+      <span class="inspired" style="position:absolute; top: 300px; left: 200px;">Inspired by friends who take care of your dog</span>
+    <%# </div>%>
+</section>
+
+
+<%# ===================================%>
+<%# login session%>
+<%# ===================================%>
+
 
 <h1>Login</h1>
 
@@ -90,19 +113,21 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
+          <i class="material-icons">face</i>
           <input placeholder="Placeholder" id="full_name" type="text" class="validate">
           <label for="full_name">Full Name</label>
         </div>
 
         <div class="input-field col s6">
+          <i class="material-icons">account_circle</i>
           <input id="userName" type="text" class="validate">
           <label for="userName">User Name</label>
         </div>
       </div>
 
-
     <div class="row">
       <div class="input-field col s12">
+        <i class="material-icons">lock</i>
         <input id="password" type="password" class="validate">
         <label for="password">Password</label>
       </div>
@@ -110,6 +135,7 @@
 
     <div class="row">
       <div class="input-field col s12">
+        <i class="material-icons">email</i>
         <input id="email" type="email" class="validate">
         <label for="email">Email</label>
       </div>
@@ -117,24 +143,27 @@
   </form>
 </div>
 
-<%# ----------------------------------%>
+
+<%# ===================================%>
 <%# Footer%>
-<%# ----------------------------------%>
+<%# ===================================%>
 
-<footer class="footer">
-    <nav class="nav navbar-inverse">
-      <div class="footer-social">
-        <ul>
-          <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
-            <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
-              <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
-            </ul>
+    <footer class="footer">
+      <nav class="nav navbar-inverse">
+        <div class="footer-social">
+          <ul>
+            <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+              <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
+                <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
+                  </ul>
 
-              <p class="copyright">Copyright &copy; 2016 Design and Developed By Erika Angarita</p>
-          </div>
-      </nav>
-  </footer>
-<%# ----------------------------------%>
+                  <p class="copyright">Copyright &copy; 2016 Design and Developed By Erika Angarita and Aaron Levinson</p>
+                        </div>
+                    </nav>
+                </footer>
+
+<%# ===================================%>
+
 
 
   </body>
