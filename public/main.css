@@ -129,10 +129,10 @@
 /*About us*/
 /*============================*/
 
-/*
-#aboutUs{
-  text-align: center;
-}*/
+.aboutTitle{
+  padding: 40px;
+  margin:30px;
+}
 
 .aboutus{
   text-align: center;
@@ -160,10 +160,6 @@
 #social .overlay {
     padding: 100px 0 120px;
 }
-
-/*.followUs {
-    color: white;
-}*/
 
 .social-button {
     margin: 0;
