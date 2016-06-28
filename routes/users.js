@@ -5,8 +5,8 @@ var methodOverride = require( 'method-override' );
 
 
 ////show homepage
-router.get( '/', function( req, res ) {
-	knex( 'users' ).select().then( function( result, err ) {
+router.get( '/', function ( req, res ) {
+	knex( 'users' ).select().then( function ( result, err ) {
 		// console.log( result );
 		res.render( 'index', {
 			user: result
@@ -17,9 +17,9 @@ router.get( '/', function( req, res ) {
 
 
 //delete
-router.get( '/:id', function( req, res ) {
+router.get( '/:id', function ( req, res ) {
 	var userId = req.params.id;
-	knex( 'users' ).where( 'id', userId ).then( function( result ) {
+	knex( 'users' ).where( 'id', userId ).then( function ( result ) {
 
 		res.render( '/users/delete', {
 			user: user
@@ -27,9 +27,9 @@ router.get( '/:id', function( req, res ) {
 	} );
 } );
 
-router.delete( '/:id', function( req, res ) {
+router.delete( '/:id', function ( req, res ) {
 	var userId = req.params.id;
-	knex( 'users' ).where( 'id', userId ).del().then( function( result ) {
+	knex( 'users' ).where( 'id', userId ).del().then( function ( result ) {
 		var user = result;
 		res.redirect( '/users' );
 		// eval( locus );

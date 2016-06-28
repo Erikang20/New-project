@@ -43,12 +43,12 @@ app.use( cookieSession( {
 app.use( passport.initialize() );
 app.use( passport.session() );
 
-passport.serializeUser( function( user, done ) {
+passport.serializeUser( function ( user, done ) {
 	//later this will be where you selectively send to the browser an identifier for your user, like their primary key from the database, or their ID from linkedin
 	done( null, user );
 } );
 
-passport.deserializeUser( function( obj, done ) {
+passport.deserializeUser( function ( obj, done ) {
 	//here is where you will go to the database and get the user each time from it's id, after you set up your db
 	done( null, obj );
 } );
@@ -68,10 +68,10 @@ passport.use( new FacebookStrategy( {
 		enableProof: true
 
 	},
-	function( accessToken, refreshToken, profile, cb ) {
+	function ( accessToken, refreshToken, profile, cb ) {
 		User.findOrCreate( {
 			facebookId: profile.id
-		}, function( err, user ) {
+		}, function ( err, user ) {
 			return cb( err, user );
 		} );
 	}
@@ -83,11 +83,11 @@ passport.use( new FacebookStrategy( {
 // Configure Passport authenticated session persistence for Facebook.
 // ---------------------------------
 
-passport.serializeUser( function( user, cb ) {
+passport.serializeUser( function ( user, cb ) {
 	cb( null, user );
 } );
 
-passport.deserializeUser( function( obj, cb ) {
+passport.deserializeUser( function ( obj, cb ) {
 	cb( null, obj );
 } );
 
@@ -117,14 +117,14 @@ app.use( '/newUser', newUser );
 // ---------------------------
 
 
-app.get( '/', function( req, res ) {
+app.get( '/', function ( req, res ) {
 	res.render( 'index', {
 		user: req.user
 	} );
 } );
 
 app.get( '/login',
-	function( req, res ) {
+	function ( req, res ) {
 		res.render( 'login' );
 	} );
 
@@ -135,7 +135,7 @@ app.get( '/login/facebook/return',
 	passport.authenticate( 'facebook', {
 		failureRedirect: '/login'
 	} ),
-	function( req, res ) {
+	function ( req, res ) {
 		res.redirect( '/' );
 	} );
 
@@ -151,7 +151,7 @@ app.get( '/login/facebook/return',
 // -------------------------------
 
 var port = process.env.PORT || 3000;
-app.listen( port, function() {
+app.listen( port, function () {
 	console.log( "Im listening yo!" );
 } );
 

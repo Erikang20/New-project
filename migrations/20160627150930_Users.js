@@ -6,16 +6,14 @@ exports.up = function( knex, Promise ) {
 		table.string( 'userName' );
 		table.string( 'email' );
 		table.string( 'password' );
-		table.string( 'about_me' );
-		table.string( 'img' );
-		table.string( 'rating' );
-		table.boolean( 'isAdmin' );
-		table.date( 'date_available_start' );
-		table.date( 'date_available_end' );
+		table.string( 'about_me' ).defaultTo( '' );
+		table.string( 'img' ).defaultTo( '' );
+		table.string( 'rating' ).defaultTo( 0 );
+		table.boolean( 'isAdmin' ).defaultTo( false );
+		table.date( 'date_available_start' ).defaultTo( '1000-1-1' );
+		table.date( 'date_available_end' ).defaultTo( '1000-1-1' );
 
 	} );
-
-
 };
 
 exports.down = function( knex, Promise ) {

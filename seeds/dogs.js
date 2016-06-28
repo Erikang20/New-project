@@ -1,10 +1,10 @@
-exports.seed = function(knex, Promise) {
+exports.seed = function ( knex, Promise ) {
 	// Deletes ALL existing entries
-	return knex('dogs').del()
-		.then(function() {
-			return Promise.all([
+	return knex( 'dogs' ).del()
+		.then( function () {
+			return Promise.all( [
 				// Inserts seed entries
-				knex('dogs').insert({
+				knex( 'dogs' ).insert( {
 					id: 1,
 					name: 'Iris',
 					age: 12,
@@ -14,8 +14,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 1
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 2,
 					name: 'Barky',
 					age: 3,
@@ -25,8 +25,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 2
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 3,
 					name: 'Woofy',
 					age: 2,
@@ -36,8 +36,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 3
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 4,
 					name: 'McWoof',
 					age: 12,
@@ -47,8 +47,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 4
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 5,
 					name: 'Zenbarka',
 					age: 3,
@@ -58,8 +58,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 5
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 6,
 					name: 'Mei',
 					age: 2,
@@ -69,8 +69,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 6
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 7,
 					name: 'Winston',
 					age: 12,
@@ -80,8 +80,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 7
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 8,
 					name: 'Mercy',
 					age: 3,
@@ -91,8 +91,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 8
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 9,
 					name: 'Lucio',
 					age: 2,
@@ -102,8 +102,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 9
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 10,
 					name: 'Woofbjorn',
 					age: 12,
@@ -113,8 +113,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 10
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 11,
 					name: 'Rhinebark',
 					age: 3,
@@ -124,8 +124,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 11
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 12,
 					name: 'Roaddog',
 					age: 2,
@@ -135,8 +135,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 12
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 13,
 					name: 'Iris',
 					age: 12,
@@ -146,8 +146,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 13
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 14,
 					name: 'Barky',
 					age: 3,
@@ -157,8 +157,8 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 2
-				}),
-				knex('dogs').insert({
+				} ),
+				knex( 'dogs' ).insert( {
 					id: 15,
 					name: 'Woofy',
 					age: 2,
@@ -168,7 +168,7 @@ exports.seed = function(knex, Promise) {
 					date_need_care_start: '2016-8-10',
 					date_need_care_end: '2016-8-12',
 					owner: 15
-				})
-			]);
-		});
+				} )
+			] );
+		} );
 };
