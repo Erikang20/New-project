@@ -101,12 +101,14 @@ var routes = require( './routes/index' );
 var users = require( './routes/users' );
 var login = require( './routes/login' );
 var profile = require( './routes/profile' );
+var newUser = require( './routes/newUser' );
 
 app.use( '/auth', auth );
 app.use( '/', routes );
 app.use( '/users', users );
 app.use( '/login', login );
 app.use( '/profile', profile );
+app.use( '/newUser', newUser );
 
 
 app.get( '/', function( req, res ) {
