@@ -32,7 +32,7 @@
 <%# header%>
 <%# -------------------------------%>
 
-<header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+<header id="navigation" class="nav-wrapper navbar-fixed-top animated-header">
   <div class="container">
     <div class="navbar-header scrollContainer destination0">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -75,43 +75,36 @@
 
 <h1>Login</h1>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-md-4">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="full_name" type="text" class="validate">
+          <label for="full_name">Full Name</label>
+        </div>
 
-            <form id="existingUserInput" class="form" action="/users" method="POST">
-              <div class="form-group">
-                <label for="name">name</label>
-                  <input id="name" type="text" name="name" class="form-control" placeholder="name">
-                  </div>
-
-              <div class="form-group">
-                <label for="userName">Username</label>
-                  <input id="userName" type="text" name="userName" class="form-control" placeholder="Username">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                      <input id="email" type="text" name="email" class="form-control" placeholder="Email">
-                      </div>
+        <div class="input-field col s6">
+          <input id="userName" type="text" class="validate">
+          <label for="userName">User Name</label>
+        </div>
+      </div>
 
 
-                    <div class="form-group">
-                      <input  id="password" type="password" name="password" class="form-control" placeholder="Password">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
 
-                      <input type="checkbox">Remember me
-                        <button id="login" type="submit" action="about.html" value="Go to about.html" class="btn btn-primary signIn">Sign in</button>
-
-                    </div>
-                  </form>
-<%# ----------------------------------%>
-<%# Facebook login button%>
-<%# ----------------------------------%>
-    <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false">
-            </div>
-                </div>
-                  </div>
-                    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate">
+        <label for="email">Email</label>
+      </div>
+    </div>
+  </form>
+</div>
 
 <%# ----------------------------------%>
 <%# Footer%>
@@ -142,6 +135,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<%# Import jQuery before materialize.js%>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 
 
   </body>
