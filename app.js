@@ -1,18 +1,19 @@
 var express = require( 'express' );
 var http = require( 'http' );
 var path = require( 'path' );
-var passport = require( 'passport' );
 var cookieSession = require( 'cookie-session' );
-var FacebookStrategy = require( 'passport-facebook' ).Strategy;
 var favicon = require( 'serve-favicon' );
 var logger = require( 'morgan' );
 var cookieParser = require( 'cookie-parser' );
 var bodyParser = require( 'body-parser' );
 var methodOverride = require( 'method-override' );
+var passport = require( 'passport' );
+var FacebookStrategy = require( 'passport-facebook' ).Strategy;
 var app = express();
 
 
 require( 'dotenv' ).load();
+require( 'locus' );
 
 
 // -------------------------------
@@ -98,11 +99,22 @@ passport.deserializeUser( function( obj, cb ) {
 var auth = require( './routes/auth' );
 var routes = require( './routes/index' );
 var users = require( './routes/users' );
-
+var login = require( './routes/login' );
+var profile = require( './routes/profile' );
+var newUser = require( './routes/newUser' );
 
 app.use( '/auth', auth );
 app.use( '/', routes );
 app.use( '/users', users );
+app.use( '/login', login );
+app.use( '/profile', profile );
+app.use( '/newUser', newUser );
+
+
+
+// ---------------------------
+// Define routes.
+// ---------------------------
 
 
 app.get( '/', function( req, res ) {
@@ -111,6 +123,29 @@ app.get( '/', function( req, res ) {
 	} );
 } );
 
+app.get( '/login',
+	function( req, res ) {
+		res.render( 'login' );
+	} );
+
+app.get( '/login/facebook',
+	passport.authenticate( 'facebook' ) );
+
+app.get( '/login/facebook/return',
+	passport.authenticate( 'facebook', {
+		failureRedirect: '/login'
+	} ),
+	function( req, res ) {
+		res.redirect( '/' );
+	} );
+
+// app.get( '/profile',
+// 	require( 'connect-ensure-login' ).ensureLoggedIn(),
+// 	function( req, res ) {
+// 		res.render( 'profile', {
+// 			user: req.user
+// 		} );
+// 	} );
 
 
 // -------------------------------
