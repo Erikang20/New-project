@@ -9,6 +9,12 @@ var bodyParser = require( 'body-parser' );
 var methodOverride = require( 'method-override' );
 var passport = require( 'passport' );
 var FacebookStrategy = require( 'passport-facebook' ).Strategy;
+var auth = require( './routes/auth' );
+var routes = require( './routes/index' );
+var users = require( './routes/users' );
+var login = require( './routes/login' );
+var profile = require( './routes/profile' );
+var newUser = require( './routes/newUser' );
 var app = express();
 
 
@@ -96,12 +102,7 @@ passport.deserializeUser( function ( obj, cb ) {
 // routes
 // -------------------------------
 
-var auth = require( './routes/auth' );
-var routes = require( './routes/index' );
-var users = require( './routes/users' );
-var login = require( './routes/login' );
-var profile = require( './routes/profile' );
-var newUser = require( './routes/newUser' );
+
 
 app.use( '/auth', auth );
 app.use( '/', routes );
@@ -127,18 +128,16 @@ app.get( '/login',
 	function ( req, res ) {
 		res.render( 'login' );
 	} );
-
-app.get( '/login/facebook',
-	passport.authenticate( 'facebook' ) );
-
-app.get( '/login/facebook/return',
+app.get( '/auth/facebook',
 	passport.authenticate( 'facebook', {
+		scope: 'read_stream'
+	} )
+);
+app.get( '/auth/facebook/callback',
+	passport.authenticate( 'facebook', {
+		successRedirect: '/',
 		failureRedirect: '/login'
-	} ),
-	function ( req, res ) {
-		res.redirect( '/' );
-	} );
-
+	} ) );
 // app.get( '/profile',
 // 	require( 'connect-ensure-login' ).ensureLoggedIn(),
 // 	function( req, res ) {
