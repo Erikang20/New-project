@@ -23,6 +23,14 @@ router.get( '/auth/facebook/callback',
 		// Successful authentication, redirect home.
 		res.redirect( '/' );
 	} );
+//
+// FACEBOOK.getLoginStatus( function( response ) {
+// 	if ( response.status === 'connected' ) {
+// 		console.log( 'Logged in.' );
+// 	} else {
+// 		FB.login();
+// 	}
+// } );
 
 
 module.exports = router;
