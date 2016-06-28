@@ -98,11 +98,13 @@ passport.deserializeUser( function( obj, cb ) {
 var auth = require( './routes/auth' );
 var routes = require( './routes/index' );
 var users = require( './routes/users' );
+var login = require( './routes/login' );
 
 
 app.use( '/auth', auth );
 app.use( '/', routes );
 app.use( '/users', users );
+app.use( '/login', login );
 
 
 app.get( '/', function( req, res ) {
