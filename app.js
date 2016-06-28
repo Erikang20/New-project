@@ -70,7 +70,7 @@ passport.use( new FacebookStrategy( {
 		clientID: process.env.FACEBOOK_APP_ID,
 		clientSecret: process.env.FACEBOOK_APP_SECRET,
 		callbackURL: "http://localhost:3000/auth/facebook/callback",
-		scope: [ 'r_emailaddress', 'r_basicprofile' ],
+		// scope: [ 'r_emailaddress', 'r_basicprofile' ],
 		enableProof: true
 
 	},
@@ -124,27 +124,26 @@ app.get( '/', function ( req, res ) {
 	} );
 } );
 
-app.get( '/login',
+app.get( '/auth',
 	function ( req, res ) {
-		res.render( 'login' );
+		res.render( 'auth' );
 	} );
+
+
 app.get( '/auth/facebook',
-	passport.authenticate( 'facebook', {
-		scope: 'read_stream'
-	} )
+	passport.authenticate( 'facebook' )
 );
+
+
+// CALLBACK URL
+// localhost:3000/login/facebook/return
 app.get( '/auth/facebook/callback',
 	passport.authenticate( 'facebook', {
-		successRedirect: '/',
-		failureRedirect: '/login'
-	} ) );
-// app.get( '/profile',
-// 	require( 'connect-ensure-login' ).ensureLoggedIn(),
-// 	function( req, res ) {
-// 		res.render( 'profile', {
-// 			user: req.user
-// 		} );
-// 	} );
+		failureRedirect: '/auth'
+	} ),
+	function ( req, res ) {
+		res.redirect( '/' );
+	} );
 
 
 // -------------------------------
