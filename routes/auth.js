@@ -7,7 +7,6 @@ var router = express.Router();
 
 
 
-
 router.get( '/auth/facebook',
 	passport.authenticate( 'facebook', {
 		state: 'SOME STATE'

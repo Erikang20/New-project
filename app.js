@@ -1,18 +1,19 @@
 var express = require( 'express' );
 var http = require( 'http' );
 var path = require( 'path' );
-var passport = require( 'passport' );
 var cookieSession = require( 'cookie-session' );
-var FacebookStrategy = require( 'passport-facebook' ).Strategy;
 var favicon = require( 'serve-favicon' );
 var logger = require( 'morgan' );
 var cookieParser = require( 'cookie-parser' );
 var bodyParser = require( 'body-parser' );
 var methodOverride = require( 'method-override' );
+var passport = require( 'passport' );
+var FacebookStrategy = require( 'passport-facebook' ).Strategy;
 var app = express();
 
 
 require( 'dotenv' ).load();
+require( 'locus' );
 
 
 // -------------------------------
@@ -112,7 +113,6 @@ app.get( '/', function( req, res ) {
 		user: req.user
 	} );
 } );
-
 
 
 // -------------------------------
