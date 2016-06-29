@@ -262,11 +262,11 @@ h1.navbar-brand {
     text-transform: uppercase;
 }
 
-.subscribe-form {
+/*.subscribe-form {
     position: relative;
     padding-bottom: 30px;
     margin-bottom: 30px;
-}
+}*/
 
 .subscribe, .form-control {
     background-color: transparent;
@@ -318,7 +318,7 @@ h1.navbar-brand {
     transform: translateX(30px);
 }
 
-.footer-content .footer-social {
+.footer-content .footer-social, .newUserNavbar {
     margin: 40px 0 35px;
 }
 
@@ -399,6 +399,7 @@ h1.navbar-brand {
   clear: both;
   justify-content: center;
 
+
 }
 
 .newuserform{
@@ -416,3 +417,11 @@ h1.navbar-brand {
 /*.material-icons{
   color: #1a237e;
 }*/
+
+.newUserNavbar{
+  background-color: #2E2E2E;
+  padding: 70px 0;
+  color: #fff;
+
+
+}
