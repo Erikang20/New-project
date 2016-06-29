@@ -44,22 +44,18 @@ app.use( cookieParser() );
 // session.
 // -------------------------------
 
-app.use( cookieSession( {
-	name: 'session',
-	keys: [ process.env[ 'SECRET_KEY' ] ]
-} ) );
-app.use( passport.initialize() );
-app.use( passport.session() );
-
-passport.serializeUser( function( user, done ) {
-	//later this will be where you selectively send to the browser an identifier for your user, like their primary key from the database, or their ID from linkedin
-	done( null, user );
-} );
-
-passport.deserializeUser( function( obj, done ) {
-	//here is where you will go to the database and get the user each time from it's id, after you set up your db
-	done( null, obj );
-} );
+// passport.serializeUser( function( user, done ) {
+// 	//later this will be where you selectively send to the browser an identifier for your user, like their primary key from the database, or their ID from linkedin
+// 	done( null, user.id );
+// } );
+//
+// passport.deserializeUser( function( id, done ) {
+// 	//here is where you will go to the database and get the user each time from it's id, after you set up your db
+// 	knex( 'users' ).where( 'id', id ).then( function( result, err ) {
+// 		done( err, result );
+// 	} );
+//
+// } );
 
 
 
@@ -81,7 +77,7 @@ passport.use( new FacebookStrategy( {
 
 		knex( 'users' ).where( "user_name", profile.id ).then( function( result, err ) {
 			console.log( result );
-			if ( !result ) {
+			if ( result.length === 0 ) {
 				console.log( "I'm here" );
 				knex( 'users' ).insert( {
 					full_name: profile.displayName,
@@ -89,12 +85,11 @@ passport.use( new FacebookStrategy( {
 					email: profile.email,
 					password: null
 				} ).then( function( result, err ) {
-					return cb( null )
+					cb( null, profile );
 				} )
 			} else {
 				console.log( "Username already exists" );
-				console.log( cb );
-				return cb( null )
+				cb( null, profile );
 			}
 		} )
 	}
@@ -102,16 +97,23 @@ passport.use( new FacebookStrategy( {
 
 
 
+app.use( cookieSession( {
+	name: 'session',
+	keys: [ process.env[ 'SECRET_KEY' ] ]
+} ) );
+app.use( passport.initialize() );
+app.use( passport.session() );
+
 // ---------------------------------
 // Configure Passport authenticated session persistence for Facebook.
 // ---------------------------------
 
 passport.serializeUser( function( user, cb ) {
-	cb( null, user );
+	cb( null, user.id );
 } );
 
-passport.deserializeUser( function( obj, cb ) {
-	cb( null, obj );
+passport.deserializeUser( function( user, cb ) {
+	cb( null, user );
 } );
 
 
