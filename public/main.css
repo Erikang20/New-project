@@ -1,9 +1,6 @@
 /*============================*/
 /*preloader*/
 /*============================*/
-body{
-	padding-top: 150px;
-}
 
 #preloader {
     background-color: #fff;
@@ -90,25 +87,17 @@ body{
     transition: all 0.8s ease 100s;
     /*background-color: rgba(0, 0, 0, .4);*/
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    padding: 5px 0;
+    /*padding: 5px 0;*/
 }
 
 #navigation.animated-header {
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .navbar-nav{
   background-color: #222222;
 }
 
-
-/*
-h1.navbar-brand {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
-}*/
 
 .navbar-inverse .navbar-nav> li> a {
     color: #fff;
@@ -119,7 +108,7 @@ h1.navbar-brand {
 .logoName {
     font-size: 50px;
     color: white;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     font-family: 'Cormorant Infant', serif;
 
 }
