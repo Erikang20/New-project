@@ -87,11 +87,12 @@
     transition: all 0.8s ease 100s;
     /*background-color: rgba(0, 0, 0, .4);*/
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    /*padding: 5px 0;*/
+    padding: 5px 0;
 }
 
 #navigation.animated-header {
-    padding: 30px 0;
+    padding: 20px 20px;
+
 }
 
 .navbar-nav{
@@ -108,8 +109,9 @@
 .logoName {
     font-size: 50px;
     color: white;
-    /*margin-left: 20px;*/
-    font-family: 'Cormorant Infant', serif;
+    margin: 10px;
+    padding: 10px;
+   font-family: 'Cormorant Infant', serif;
 
 }
 
@@ -246,10 +248,10 @@
     margin-bottom: 40px;
 }
 
-.footer-content> div> p:first-child {
+/*.footer-content> div> p:first-child {
     margin-bottom: 15px;
     text-transform: uppercase;
-}
+}*/
 
 /*.subscribe-form {
     position: relative;
@@ -345,6 +347,7 @@
 .copyright{
   text-align: center;
   padding: 10px;
+  background-color: #222222;
 }
 
 /*==================================*/
@@ -382,6 +385,7 @@
 /*new user page*/
 /*==================================*/
 
+
 .newUser{
   margin: 130px;
   padding: 130px;
@@ -403,15 +407,14 @@
   margin: 50px;
 }
 
-/*.material-icons{
-  color: #1a237e;
-}*/
-
-.newUserNavbar{
-  background-color: #2E2E2E;
-  padding: 70px 0;
-  color: #fff;
-
+/*this includes the footer for the newUser and the login page*/
+.newUserNavbar, .social-users{
+  /*background-color: #2E2E2E;*/
+  padding: 0;
+  margin: 0;
+  /*color: #fff;*/
+  text-align: center;
+  font-size: 12px;
 
 }
 
