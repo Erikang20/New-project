@@ -11,12 +11,14 @@ var passport = require( 'passport' );
 var pg = require( 'pg' );
 var knex = require( './db/knex' );
 var FacebookStrategy = require( 'passport-facebook' ).Strategy;
+var LocalStrategy = require( 'passport-local' ).Strategy;
 var auth = require( './routes/auth' );
 var routes = require( './routes/index' );
 var users = require( './routes/users' );
 var login = require( './routes/login' );
 var profile = require( './routes/profile' );
 var newUser = require( './routes/newUser' );
+var bcrypt = require( 'bcrypt' );
 var app = express();
 
 
@@ -39,6 +41,25 @@ app.use( bodyParser.urlencoded( {
 app.use( methodOverride( '_method' ) );
 app.use( cookieParser() );
 
+app.use( cookieSession( {
+	name: 'session',
+	keys: [ process.env[ 'SECRET_KEY' ] ]
+} ) );
+app.use( passport.initialize() );
+app.use( passport.session() );
+
+// ---------------------------------
+// Configure Passport authenticated session persistence for Facebook.
+// ---------------------------------
+
+passport.serializeUser( function( user, cb ) {
+	cb( null, user.id );
+} );
+
+passport.deserializeUser( function( user, cb ) {
+	cb( null, user );
+} );
+
 // -------------------------------
 // Initialize Passport and restore authentication state, if any, from the
 // session.
@@ -58,6 +79,29 @@ app.use( cookieParser() );
 // } );
 
 
+passport.use( new LocalStrategy( {
+	usernameField: 'user_name',
+	passwordField: 'password'
+}, function( username, password, done ) {
+
+	console.log( "yo" );
+
+	console.log( "yo, im here" );
+	// Check id of user, retrieve row in users table.
+	knex( 'users' ).where( 'user_name', username )
+		.first()
+		.then( function( user ) {
+			// compareSync the user's hashed password.
+			if ( user && bcrypt.compareSync( password, user.password ) ) {
+				// On match, return confirmation of session.
+				console.log( "I'm here fam" );
+				return done( null, user );
+			}
+			// Otherwise, return no session, redirect.
+			console.log( 'otherwised' );
+			return done( null, false );
+		} )
+} ) );
 
 // ---------------------------------
 // Facebook Strategy
@@ -97,24 +141,8 @@ passport.use( new FacebookStrategy( {
 
 
 
-app.use( cookieSession( {
-	name: 'session',
-	keys: [ process.env[ 'SECRET_KEY' ] ]
-} ) );
-app.use( passport.initialize() );
-app.use( passport.session() );
 
-// ---------------------------------
-// Configure Passport authenticated session persistence for Facebook.
-// ---------------------------------
 
-passport.serializeUser( function( user, cb ) {
-	cb( null, user.id );
-} );
-
-passport.deserializeUser( function( user, cb ) {
-	cb( null, user );
-} );
 
 
 // -------------------------------
@@ -123,10 +151,10 @@ passport.deserializeUser( function( user, cb ) {
 
 
 
+app.use( '/login', login );
 app.use( '/auth', auth );
 app.use( '/', routes );
 app.use( '/users', users );
-app.use( '/login', login );
 app.use( '/profile', profile );
 app.use( '/newUser', newUser );
 
@@ -153,7 +181,6 @@ app.get( '/auth/facebook',
 	passport.authenticate( 'facebook' )
 );
 
-
 // CALLBACK URL
 // localhost:3000/login/facebook/return
 app.get( '/auth/facebook/callback',
@@ -175,4 +202,4 @@ app.listen( port, function() {
 
 module.exports = {
 	app
-};
+};;
