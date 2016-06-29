@@ -92,37 +92,47 @@
 <%# end of the header and top navigation%>
 <%# -------------------------------------------%>
 
-<h1>Login</h1>
-
-    <div class="container login">
+<h1 class="login-title">Login</h1>
+  <div class="row newUser">
+      <form class="login-form col s12 form" action="/newUser" method="POST">
         <div class="row">
-          <div class="col-md-4">
 
-            <form id="existingUserInput" class="form" action="/users" method="POST">
-              <div class="form-group">
-                <label for="userName">Username</label>
-                  <input id="userName" type="text" name="userName" class="form-control" placeholder="Username">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                      <input id="email" type="text" name="email" class="form-control" placeholder="Email">
-                      </div>
+              <div class="row">
+                <div class="input-field col s6">
+                    <label for="userName"><i class="material-icons">account_circle</i>  User Name</label>
+                      <input placeholder="Username" id="userName" type="text" class="validate">
+                </div>
+              </div>
 
 
-                    <div class="form-group">
-                      <input  id="password" type="password" name="password" class="form-control" placeholder="Password">
+              <div class="row">
+                <div class="input-field col s6">
+                  <label for="password"><i class="material-icons">lock</i>  Password</label>
+                  <input placeholder="password" id="password" type="text" class="validate">
+                </div>
+              </div>
 
-                      <input type="checkbox">Remember me
-                        <button id="login" type="submit" action="about.html" value="Go to about.html" class="btn btn-primary signIn">Sign in</button>
+                <button class="btn waves-effect waves-light newUserButton" type="submit" name="action">Login
+                    <i class="material-icons right"></i>
+                  </button>
 
-                    </div>
-                  </form>
-<%# ----------------------------------%>
-<%# Facebook login button%>
-<%# ----------------------------------%>
 
-<a href="/auth/facebook">Login with Facebook</a>
+
+                  <%# ----------------------------------%>
+                  <%# Facebook login button%>
+                  <%# ----------------------------------%>
+                  <button id="facebook" class="btn facebook-button" type="submit" name="action">Login with
+                    <i class="fa fa-facebook" aria-hidden="true"></i><a href="/auth/facebook"></a>
+                   </button>
+                 </form>
+               </div>
+             </div>
+
+
+
+<%# <a href="/auth/facebook"><i class="fa fa-facebook" aria-hidden="true">Login with Facebook</i></a>%>
+
+
 
 
 <%# ===================================%>
