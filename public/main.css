@@ -1,7 +1,9 @@
 /*============================*/
 /*preloader*/
 /*============================*/
-
+body{
+	padding-top: 150px;
+}
 
 #preloader {
     background-color: #fff;

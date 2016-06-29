@@ -82,7 +82,7 @@ passport.use( new FacebookStrategy( {
 				knex( 'users' ).insert( {
 					full_name: profile.displayName,
 					user_name: profile.id,
-					email: profile.email,
+					email: 'facebook',
 					password: null
 				} ).then( function( result, err ) {
 					cb( null, profile );
@@ -161,7 +161,8 @@ app.get( '/auth/facebook/callback',
 		failureRedirect: '/login'
 	} ),
 	function( req, res ) {
-		res.redirect( '/users' );
+
+		res.redirect( '/profile' );
 	} );
 
 

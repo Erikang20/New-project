@@ -89,8 +89,15 @@
 <%# ===================================%>
 <%# end of the header and top navigation%>
 <%# ===================================%>
-<h3>Name:<%=user.full_name%></h3>
-
+	<%if(thisUser.is_admin){%>
+    <div class="profile thumbnail">
+				<%for(var i=0; i<users.length; i++){%>
+        <h3>Name: <a href="users/<%=users[i].id%>"><%= users[i].full_name %></a></h3>
+        <h3>UserName: <%= users[i].user_name %> </h3>
+       </div>
+			 <%}%>
+	<%}else{%><h1>This is for admins only</h1>}
+	<%}%>
 
 
 
