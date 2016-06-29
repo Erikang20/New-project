@@ -19,8 +19,6 @@
       <%# js%>
      <script type="text/javascript" src="./main.js"></script>
 
-    <%# bootstrap%>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
       <%# Google Icons%>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -37,6 +35,8 @@
       <%# Compiled and minified JavaScript %>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
+      <%# bootstrap%>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <%# fontawesome%>
     <script src="https://use.fontawesome.com/405a0adae2.js"></script>
@@ -51,10 +51,9 @@
 <%# header%>
 <%# ===================================%>
 
-<header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-        <div class="container">
+<header id="navigation" class="navbar-inverse navbar-fixed-top animated-header new-user-header">
+        <div class="container new-user-header">
           <div class="navbar-header scrollContainer destination0">
-
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -74,7 +73,7 @@
    <ul id="nav" class="nav navbar-nav">
       <li class="nav-item"><a class= "navbar-link" href="/">Home</a></li>
         <li class="nav-item"><a class="navbar-link" href="/">About us</a></li>
-          <li class="active nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
+          <li class="nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
             <li class="nav-item"><a class="navbar-link support transition" href="#contactIndex">Contact Us</a></li>
             <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
         </ul>
@@ -98,8 +97,7 @@
 <%# ===================================%>
 
 <section class="parallax-container" style="opacity: 3; transform: translateY(25px);">
-  <div class="parallax-window" data-parallax="scroll" </div>
-    <data-img src="https://images.unsplash.com/photo-1414277578841-112f6e9398ec?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375">
+  <div class="parallax-window" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1446042833391-66c26bc1afce?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1350"></div>
     <div class="parallax-slider">
       <span class="inspired" style="position:absolute; top: 300px; left: 200px;">Inspired by friends who take care of your dog</span>
     </div>
@@ -111,23 +109,40 @@
 <%# ===================================%>
 
 
-  <div class="row newUser">
+  <div class="row newUser center-align">
     <h1 class="newusertitle">Welcome</h1>
+<!-- <<<<<<< HEAD
       <form class="newuserform col s12 form" action="/newUser" method="POST">
         <div class="row">
           <div class="input-field col s8">
             <label for="full_name"><i class="material-icons">face</i>  Full Name</label>
             <input placeholder="Full Name" id="full_name" type="text" class="validate" name="full_name">
-          </div>
+======= -->
 
+      <form class="center-align" action="/newUser" method="POST">
+
+        <div class="center-align">
+          <div class="input-field col s6 newuserform center-align">
+            <label for="full_name"><i class="material-icons center-align">face</i></label>
+            <input placeholder="Full Name" id="full_name" type="text" class="validate">
+          </div>
+        </div>
+
+<!-- <<<<<<< HEAD
               <div class="row">
                 <div class="input-field col s8">
                     <label for="user_name"><i class="material-icons">account_circle</i>  User Name</label>
                       <input placeholder="Username" id="user_name" type="text" class="validate" name="user_name">
+======= -->
+              <div class="center-align">
+                <div class="input-field col s6 newuserform">
+                    <label for="userName"><i class="material-icons newuser-icon">account_circle</i></label>
+                      <input placeholder="Username" id="user_name" type="text" class="validate">
                 </div>
               </div>
 
 
+<!-- <<<<<<< HEAD
                 <div class="row">
                   <div class="input-field col s8">
                     <label for="password"><i class="material-icons">lock</i>  Password</label>
@@ -139,35 +154,53 @@
                       <div class="input-field col s8">
                         <label for="email"><i class="material-icons">email</i>  Email</label>
                         <input placeholder="email" id="email" type="email" class="validate" name="email">
+======= -->
+                <div class="center-align">
+                  <div class="input-field col s6 newuserform">
+                    <label for="password"><i class="material-icons newuser-icon">lock</i></label>
+                    <input placeholder="password" id="password" type="text" class="validate">
+                  </div>
+                </div>
+
+                    <div class="center-align">
+                      <div class="input-field col s6 newuserform">
+                        <label for="email"><i class="material-icons newuser-icon">email</i></label>
+                        <input placeholder="email" id="email" type="email" class="validate">
                       </div>
                     </div>
 
-                      <button class="btn waves-effect waves-light newUserButton" type="submit" name="action">Submit
+                      <button class="btn waves-effect waves-light newUserButton newuser-icon" type="submit" name="action">Submit
                           <i class="material-icons right">send</i>
                         </button>
+
+                         <h5>Or</h5>
+
+                        <button id="facebook" class="btn facebook-button" type="submit" name="action">Login with
+                          <i class="fa fa-facebook" aria-hidden="true"></i><a href="/auth/facebook"></a>
+                         </button>
           </form>
       </div>
-    </div>
 
 
 <%# ===================================%>
 <%# Footer%>
 <%# ===================================%>
 
-    <footer class="footer newUserNavbar">
-      <nav class="nav navbar-inverse">
-        <div class="footer-social">
-          <ul>
-            <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
-              <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
-                <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
-                  </ul>
-                  <p class="copyright">Copyright &copy; 2016 Design and Developed By Erika Angarita and Aaron Levinson</p>
-                        </div>
-                    </nav>
-                </footer>
+        <footer class="footer">
+          <nav class="nav navbar-inverse">
+            <div class="footer-social">
+              <ul class="social-links">
+                <li class="wow animated zoomIn"><a href="https://www.facebook.com/"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+                  <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://twitter.com"><i class="fa fa-twitter fa-3x"></i></a></li>
+                    <li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x"></i></a></li>
+                      </ul>
 
-<%# ===================================%>
+                      <p class="copyright no-materialize">Copyright &copy; 2016 Design and Developed By Erika Angarita and Aaron Levinson</p>
+                            </div>
+                        </nav>
+                    </footer>
+
+    <%# ===================================%>
 
 
 <%# parallax %>

@@ -1,9 +1,6 @@
 /*============================*/
 /*preloader*/
 /*============================*/
-body{
-	padding-top: 150px;
-}
 
 #preloader {
     background-color: #fff;
@@ -94,21 +91,14 @@ body{
 }
 
 #navigation.animated-header {
-    padding: 20px 0;
+    padding: 20px 20px;
+
 }
 
 .navbar-nav{
   background-color: #222222;
 }
 
-
-/*
-h1.navbar-brand {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
-}*/
 
 .navbar-inverse .navbar-nav> li> a {
     color: #fff;
@@ -119,8 +109,9 @@ h1.navbar-brand {
 .logoName {
     font-size: 50px;
     color: white;
-    margin-left: 20px;
-    font-family: 'Cormorant Infant', serif;
+    margin: 10px;
+    padding: 10px;
+   font-family: 'Cormorant Infant', serif;
 
 }
 
@@ -257,10 +248,10 @@ h1.navbar-brand {
     margin-bottom: 40px;
 }
 
-.footer-content> div> p:first-child {
+/*.footer-content> div> p:first-child {
     margin-bottom: 15px;
     text-transform: uppercase;
-}
+}*/
 
 /*.subscribe-form {
     position: relative;
@@ -356,6 +347,7 @@ h1.navbar-brand {
 .copyright{
   text-align: center;
   padding: 10px;
+  background-color: #222222;
 }
 
 /*==================================*/
@@ -393,6 +385,7 @@ h1.navbar-brand {
 /*new user page*/
 /*==================================*/
 
+
 .newUser{
   margin: 130px;
   padding: 130px;
@@ -402,26 +395,27 @@ h1.navbar-brand {
 
 }
 
-.newuserform{
-  text-align: center;
-  align-items: flex-start;;
-  justify-content: center;
-}
-
 .newusertitle{
   text-align: center;
   padding: 50px;
   margin: 50px;
 }
 
-/*.material-icons{
-  color: #1a237e;
-}*/
+#full_name, #userName, #password, #email {
+padding-top: 10px;
+}
 
-.newUserNavbar{
-  background-color: #2E2E2E;
-  padding: 70px 0;
-  color: #fff;
+.facebook-button{
 
+background-color: #3b5998;
 
+}
+
+.no-materialize{
+
+background-color: #222222;
+}
+
+.social-links{
+    text-align: center;
 }
