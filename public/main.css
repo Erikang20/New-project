@@ -387,16 +387,22 @@ h1.navbar-brand {
 
 
 
-
 /*==================================*/
 /*new user page*/
 /*==================================*/
 
 .newUser{
-  margin: 50px;
-  padding: 50px;
-  text-align: center;
+  margin: 130px;
+  padding: 130px;
+  clear: both;
+  justify-content: center;
 
+}
+
+.newuserform{
+  text-align: center;
+  align-items: flex-start;;
+  justify-content: center;
 }
 
 .newusertitle{
@@ -405,6 +411,6 @@ h1.navbar-brand {
   margin: 50px;
 }
 
-.material-icons, .newUserButton{
+/*.material-icons{
   color: #1a237e;
-}
+}*/

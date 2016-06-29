@@ -22,9 +22,13 @@
     <%# bootstrap%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <%# Google Icons%>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      <%# Google Icons%>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+      <%# google Fonts%>
+      <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans" rel="stylesheet">
+
 
       <%# materialize%>
        <%# Compiled and minified CSS %>
@@ -107,45 +111,43 @@
 <%# ===================================%>
 
 
-<h1 class="newusertitle">Welcome</h1>
   <div class="row newUser">
-    <form class="col s12 form" action="/newUser" method="POST">
-      <div class="row">
-        <div class="input-field col s6">
-          <i class="material-icons">face</i>
-          <label for="full_name">Full Name</label>
-          <input placeholder="Full Name" id="full_name" type="text" class="validate">
-        </div>
+    <h1 class="newusertitle">Welcome</h1>
+      <form class="newuserform col s12 form" action="/newUser" method="POST">
+        <div class="row">
+          <div class="input-field col s8">
+            <label for="full_name"><i class="material-icons">face</i>  Full Name</label>
+            <input placeholder="Full Name" id="full_name" type="text" class="validate">
+          </div>
 
-        <div class="input-field col s6">
-          <i class="material-icons">account_circle</i>
-            <label for="userName">User Name</label>
-              <input placeholder="Username" id="userName" type="text" class="validate">
-        </div>
-      </div>
+              <div class="row">
+                <div class="input-field col s8">
+                    <label for="userName"><i class="material-icons">account_circle</i>  User Name</label>
+                      <input placeholder="Username" id="userName" type="text" class="validate">
+                </div>
+              </div>
 
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons">lock</i>
-        <label for="password">Password</label>
-        <input placeholder="password" id="password" type="text" class="validate">
+
+                <div class="row">
+                  <div class="input-field col s8">
+                    <label for="password"><i class="material-icons">lock</i>  Password</label>
+                    <input placeholder="password" id="password" type="text" class="validate">
+                  </div>
+                </div>
+
+                    <div class="row">
+                      <div class="input-field col s8">
+                        <label for="email"><i class="material-icons">email</i>  Email</label>
+                        <input placeholder="email" id="email" type="email" class="validate">
+                      </div>
+                    </div>
+
+                      <button class="btn waves-effect waves-light newUserButton" type="submit" name="action">Submit
+                          <i class="material-icons right">send</i>
+                        </button>
+          </form>
       </div>
     </div>
-
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons">email</i>
-        <label for="email">Email</label>
-        <input placeholder="email" id="email" type="email" class="validate">
-      </div>
-    </div>
-    <button class="btn waves-effect waves-light newUserButton" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
-
-    </form>
-  </fieldset>
-</div>
 
 
 <%# ===================================%>
