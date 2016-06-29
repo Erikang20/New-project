@@ -9,7 +9,7 @@ exports.up = function( knex, Promise ) {
 		table.string( 'description' );
 		table.date( 'date_need_care_start' );
 		table.date( 'date_need_care_end' );
-		table.integer( 'owner' ).unsigned().index().references( 'users.id' );
+		table.integer( 'owner' ).unsigned().index().references( 'users.id' ).onDelete( 'CASCADE' );
 
 	} );
 
