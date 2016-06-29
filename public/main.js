@@ -21,16 +21,15 @@ $( document ).ready( function( parallax ) {
 
 $( window ).load( function() {
 	$( "#preloader" ).fadeOut( "slow" );
+} );
 
-	// animation when the page is being scroll
-	$( window ).scroll( function() {
-		if ( $( window ).scrollTop() > 400 ) {
-			$( ".navbar-brand a" ).css( "color", "#fff" );
-			$( "#navigation" ).removeClass( "animated-header" );
-		} else {
-			$( ".navbar-brand a" ).css( "color", "inherit" );
-			$( "#navigation" ).addClass( "animated-header" );
-		}
-	} );
-
+// animation when the page is being scroll
+$( window ).scroll( function() {
+	if ( $( window ).scrollTop() > 400 ) {
+		$( ".navbar-brand a" ).css( "color", "#fff" );
+		$( "#navigation" ).removeClass( "animated-header" );
+	} else {
+		$( ".navbar-brand a" ).css( "color", "inherit" );
+		$( "#navigation" ).addClass( "animated-header" );
+	}
 } );
