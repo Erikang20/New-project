@@ -6,10 +6,11 @@ var methodOverride = require( 'method-override' );
 
 ////show homepage
 router.get( '/', function( req, res ) {
+	console.log( req.session.passport );
 	knex( 'users' ).select().then( function( result, err ) {
-		// console.log( result );
 		res.render( 'profile', {
-			users: result
+			users: result,
+			thisUser: req.user
 		} );
 	} );
 } );
