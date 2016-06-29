@@ -57,7 +57,6 @@
     100% {
       box-shadow: inset 60px 0px 0px #2E2E2E;}
 
-
 }
 
 @-moz-keyframes charge {
@@ -67,7 +66,7 @@
       box-shadow: inset 60px 0px 0px #2E2E2E;}
 }
 
-@keyframes charge {
+@-moz-keyframes charge {
     0% {
         box-shadow: inset 0px 0px 0px #2E2E2E;
     }
@@ -79,6 +78,41 @@
 /*============================*/
 /*Header*/
 /*============================*/
+
+
+#navigation {
+    -webkit-transition: all 0.8s ease 0s;
+    -moz-transition: all 0.8s ease 0s;
+    -ms-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 100s;
+    /*background-color: rgba(0, 0, 0, .4);*/
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 5px 0;
+}
+
+#navigation.animated-header {
+    padding: 20px 0;
+}
+
+.navbar-nav{
+  background-color: #222222;
+}
+
+
+/*
+h1.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}*/
+
+.navbar-inverse .navbar-nav> li> a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
 
 .logoName {
     font-size: 50px;
@@ -92,8 +126,6 @@
     text-align: right;
     overflow: scroll;
 }
-
-
 
 
 /*============================*/
@@ -117,6 +149,12 @@
     min-height: 700px;
     background: transparent;
     height: 100vh;
+}
+
+
+.inspired {
+    color: white;
+    font-size: 50px;
 }
 
 
@@ -319,20 +357,60 @@
 }
 
 /*==================================*/
+/*index*/
+/*==================================*/
+
+.aboutTitle{
+  font-size: 60px;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  /*height: 25vh;*/
+
+}
+
+.team {
+    font-size: 60px;
+    margin: 30px;
+    padding: 60px;
+    color: #009EE3;
+    height: 25vh;
+}
+
+
+
+#jack, #erika, #aaron{
+  height: 200px;
+  width: auto;
+}
+
+
+
+
+/*==================================*/
 /*new user page*/
 /*==================================*/
 
 .newUser{
-  margin: 30px;
-  padding: 30px;
-  text-align: center;
+  margin: 130px;
+  padding: 130px;
+  clear: both;
+  justify-content: center;
 
+}
+
+.newuserform{
+  text-align: center;
+  align-items: flex-start;;
+  justify-content: center;
 }
 
 .newusertitle{
   text-align: center;
+  padding: 50px;
+  margin: 50px;
 }
 
-.material-icons, .newUserButton{
+/*.material-icons{
   color: #1a237e;
-}
+}*/

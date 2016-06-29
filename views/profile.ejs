@@ -17,11 +17,6 @@
     <%# jquery before everything%>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 
-
-
-    <%# materialize %>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
     <%# bootstrap%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -29,17 +24,28 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
+    <%# materialize%>
+    <%# Compiled and minified CSS %>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+   <%# Compiled and minified JavaScript %>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+   <%# google Fonts%>
+   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans" rel="stylesheet">
+
     <%# fontawesome%>
     <script src="https://use.fontawesome.com/405a0adae2.js"></script>
+
   </head>
 
 
 
   <body>
 
-<%# ------------------------------------------%>
+<%# ===================================%>
 <%# header%>
-<%# ------------------------------------------%>
+<%# ===================================%>
 
 <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
         <!-- <nav class="collapse navbar-collapse navbar-right" role="navigation"> -->
@@ -57,10 +63,9 @@
           </div>
 
 
-<%# ------------------------------------------%>
+<%# ===================================%>
 <%# main nav %>
-<%# ------------------------------------------%>
-
+<%# ===================================%>
 
     <nav class="collapse navbar-collapse navbar-right" role="navigation">
         <ul id="nav" class="nav navbar-nav">
@@ -74,16 +79,16 @@
       </nav>
 
 
-<%# ------------------------------------------%>
+<%# ===================================%>
 <%# End of main nav %>
-<%# ------------------------------------------%>
+<%# ===================================%>
 
       </div>
    </header>
 
-<%# ------------------------------------------%>
+<%# ===================================%>
 <%# end of the header and top navigation%>
-<%# ------------------------------------------%>
+<%# ===================================%>
 
     <div class="profile thumbnail">
 				<%for(var i=0; i<users.length; i++){%>
