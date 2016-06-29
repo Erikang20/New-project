@@ -81,7 +81,7 @@ passport.use( new FacebookStrategy( {
 
 		knex( 'users' ).where( "user_name", profile.id ).then( function( result, err ) {
 			console.log( result );
-			if ( !result ) {
+			if ( result.length === 0 ) {
 				console.log( "I'm here" );
 				knex( 'users' ).insert( {
 					full_name: profile.displayName,
