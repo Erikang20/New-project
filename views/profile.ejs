@@ -90,13 +90,18 @@
 <%# end of the header and top navigation%>
 <%# ===================================%>
 
+
+<h1>testing</h1>
     <div class="profile thumbnail">
 				<%for(var i=0; i<users.length; i++){%>
+          <h1>Welcome <%= users[i].full_name %></h1>
         <h3>Name: <a href="users/<%=users[i].id%>"><%= users[i].full_name %></a></h3>
-        <h3>UserName: <%= users[i].user_name %> </h3>
+        <img src="#">
+        <h5>UserName: <%= users[i].user_name %> </h5>
        </div>
 			 <%}%>
 
+       <h1>testing</h1>
 
 
 <%# ===================================%>
