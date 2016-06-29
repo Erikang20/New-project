@@ -6,11 +6,10 @@ var bodyParser = require( 'body-parser' );
 
 /* GET home page. */
 router.get( '/', function( req, res, next ) {
-	console.log( "hey" );
-	knex( 'users' ).select().then( function( result, err ) {
+	knex( 'users' ).where( 'user_name', req.session.passport.user ).first().then( function( result, err ) {
+		console.log( result );
 		res.render( 'profile', {
-			user: result,
-			thisUser: req.user
+			user: result
 		} );
 	} );
 } );

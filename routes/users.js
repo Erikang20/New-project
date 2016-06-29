@@ -8,7 +8,7 @@ var methodOverride = require( 'method-override' );
 router.get( '/', function( req, res ) {
 	console.log( req.session.passport );
 	knex( 'users' ).select().then( function( result, err ) {
-		res.render( 'profile', {
+		res.render( 'users', {
 			users: result,
 			thisUser: req.user
 		} );
@@ -20,7 +20,8 @@ router.get( '/', function( req, res ) {
 router.get( '/:id', function( req, res ) {
 	knex( 'users' ).where( 'id', req.params.id ).then( function( result, err ) {
 		res.render( 'profile', {
-			users: result
+			users: result,
+			thisUser: req.user
 		} );
 	} );
 } );
