@@ -566,6 +566,12 @@ background-color: #222222;
   margin: 70px;
 }
 
+.profile-title{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 40px;
+
+}
+
 .profile_name{
 
   padding: 30px;
