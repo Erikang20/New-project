@@ -6,6 +6,7 @@
 a, a:hover, a:focus, .btn:focus {
     text-decoration: none;
     outline: none;
+    color: white;
 }
 
 
@@ -429,9 +430,12 @@ textarea.form-control {
 }
 
 .newusertitle{
+  padding: 20px 10px;
+  margin: 20px;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 70px;
+  color: #003049;
   text-align: center;
-  padding: 50px;
-  margin: 50px;
 }
 
 #full_name, #userName, #password, #email {

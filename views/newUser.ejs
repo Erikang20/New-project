@@ -26,7 +26,7 @@
       rel="stylesheet">
 
       <%# google Fonts%>
-      <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans|Shadows+Into+Light" rel="stylesheet">
 
 
       <%# materialize%>
@@ -108,39 +108,39 @@
       <form class="center-align col s6 offset-s3" action="/newUser" method="POST">
 
         <div class="row center-align">
-          <div class="input-field  newuserform center-align">
+          <div class="input-field col s6 offset-s3 newuserform center-align">
             <label for="full_name"><i class="material-icons center-align">face</i></label>
             <input placeholder="Full Name" id="full_name" type="text" class="validate" name="full_name">
           </div>
         </div>
 
               <div class="row center-align">
-                <div class="input-field col s6 newuserform center-align">
+                <div class="input-field col s6 offset-s3 newuserform center-align">
                     <label for="user_name"><i class="material-icons center-align">account_circle</i></label>
                       <input placeholder="Username" id="user_name" type="text" class="validate" name="user_name">
                 </div>
               </div>
 
                 <div class="row center-align">
-                  <div class="input-field col s6 newuserform center-align">
+                  <div class="input-field col s6 offset-s3 newuserform center-align">
                     <label for="password"><i class="material-icons center-align">lock</i></label>
                     <input placeholder="password" id="password" type="password" class="validate" name="password">
                   </div>
                 </div>
 
                     <div class="row center-align">
-                      <div class="input-field col s6 newuserform center-align">
+                      <div class="input-field col s6 offset-s3 newuserform center-align">
                         <label for="email"><i class="material-icons newuser-icon">email</i></label>
                         <input placeholder="email" id="email" type="email" class="validate" name="email">
                       </div>
                     </div>
 
-                      <button class="btn waves-effect waves-light newUserButton newuser-icon" type="submit" name="action">Submit
+                      <button class="btn waves-effect waves-light newUserButton newuser-icon indigo darken-4" type="submit" name="action">Submit
                           <i class="material-icons right">send</i>
                         </button>
 
                          <h5>Or</h5>
-                          <a href="/auth/facebook" class="waves-effect waves-light btn blue">
+                          <a href="/auth/facebook" class="waves-effect waves-light btn indigo darken-4">
                             Login with facebook <i class="large material-icons">thumb_up</i>
                           </a>
 
