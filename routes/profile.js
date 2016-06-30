@@ -7,12 +7,18 @@ var bodyParser = require( 'body-parser' );
 /* GET home page. */
 router.get( '/', function( req, res, next ) {
 	knex( 'users' ).where( 'user_name', req.session.passport.user ).first().then( function( result, err ) {
-		console.log( result );
+		// console.log( result );
 		res.render( 'profile', {
 			user: result
 		} );
 	} );
 } );
+
+// router.get( '/', function( req, res, next ) {
+// 	res.render( 'profile' );
+// } );
+
+
 //
 // router.get( '/', function( req, res, next ) {
 // 	res.cookie( 'views', parseInt( req.cookies.views || 0 ) + 1 );
