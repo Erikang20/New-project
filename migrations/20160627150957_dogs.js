@@ -5,7 +5,7 @@ exports.up = function( knex, Promise ) {
 		table.string( 'name' );
 		table.integer( 'age' );
 		table.string( 'breed' );
-		table.string( 'img' );
+		table.string( 'dog_img' );
 		table.string( 'description' );
 		table.date( 'date_need_care_start' );
 		table.date( 'date_need_care_end' );

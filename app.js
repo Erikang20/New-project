@@ -112,8 +112,8 @@ passport.use( new FacebookStrategy( {
 
 		console.log( profile );
 		knex( 'users' ).where( "user_name", profile.id ).first().then( function( result, err ) {
-			console.log( result );
-			if ( result.length === 0 ) {
+			console.log( "FUCK" + result );
+			if ( !result ) {
 				console.log( "I'm here" );
 				knex( 'users' ).insert( {
 					full_name: profile.displayName,
