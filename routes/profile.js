@@ -6,8 +6,7 @@ var bodyParser = require( 'body-parser' );
 
 /* GET home page. */
 router.get( '/', function( req, res, next ) {
-	console.log( req.session.passport.user );
-	knex( 'users' ).where( 'id', req.session.passport.user.id ).first().then( function( result, err ) {
+	knex( 'users' ).where( 'users.id', req.session.passport.user.id ).innerJoin( 'dogs', 'users.id', 'dogs.owner' ).first().then( function( result, err ) {
 		console.log( result );
 		res.render( 'profile', {
 			user: result
