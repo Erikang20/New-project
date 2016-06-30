@@ -71,45 +71,12 @@ a, a:hover, a:focus, .btn:focus {
     color: #009EE3;
 }
 
+
 .btn-effect:hover:before, .btn-effect:focus:before, .btn-effect:active:before {
     -webkit-transform: scaleX(1);
     -moz-transform: scaleX(1);
     -ms-transform: scaleX(1);
     transform: scaleX(1);
-}
-
-.sec-title {
-    margin-bottom: 50px;
-}
-
-.sec-title.white {
-    color: #fff;
-}
-
-.sec-title h2 {
-    font-size: 36px;
-    margin: 0 0 30px;
-    padding-bottom: 30px;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.sec-title.white h2 {
-    color: #fff;
-}
-
-.sec-title h2:after {
-    border-bottom: 1px solid #009ee3;
-    content: "";
-    display: block;
-    left: 45%;
-    bottom: 0;
-    position: absolute;
-    width: 115px;
-}
-
-.sec-title.white h2:after {
-    border-bottom: 1px solid #fff;
 }
 
 
@@ -230,30 +197,6 @@ a, a:hover, a:focus, .btn:focus {
 
 }
 
-
-.fancybox-item.fancybox-close {
-    background: url("../img/icons/close.png") no-repeat scroll 0 0 transparent;
-    height: 50px;
-    right: 0;
-    top: 0;
-    width: 50px;
-}
-
-.fancybox-next span {
-    background: url("../img/right.png") no-repeat scroll center center #009ee3;
-    height: 50px;
-    width: 50px;
-    right: 0;
-}
-
-.fancybox-prev span {
-    background: url("../img/left.png") no-repeat scroll center center #009ee3;
-    height: 50px;
-    width: 50px;
-    left: 0;
-}
-
-
 /*============================*/
 /*End of Header*/
 /*============================*/
@@ -280,7 +223,10 @@ a, a:hover, a:focus, .btn:focus {
 
 .inspired {
     color: white;
-    font-size: 50px;
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+
 }
 
 
@@ -294,14 +240,8 @@ a, a:hover, a:focus, .btn:focus {
 /*============================*/
 
 
-
-#social {
-    /*background-color: #143E51;*/
-    margin-bottom: 20px;
-}
-
 #social .overlay {
-    padding: 100px 0 120px;
+    padding: 80px;
 }
 
 .social-button {
@@ -334,8 +274,8 @@ a, a:hover, a:focus, .btn:focus {
 }
 
 .social-button li a:hover {
-    color: #008ECC;
-    border: 2px solid #008ECC;
+    color: #094D92;
+    border: 2px solid #094D92;
 }
 
 
@@ -346,7 +286,6 @@ a, a:hover, a:focus, .btn:focus {
 
 
 #footer {
-    background-color: #2E2E2E;
     padding: 70px 0;
     color: #fff;
 }
@@ -365,61 +304,17 @@ a, a:hover, a:focus, .btn:focus {
     text-transform: uppercase;
 }
 
-/*.subscribe-form {
-    position: relative;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}*/
-
-.subscribe, .form-control {
+.form-control {
     background-color: transparent;
     border: 1px solid #7f7f7f;
 }
 
-.subscribe, .form-control:focus {
+.form-control:focus {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
 
-.submit-icon {
-    background-color: #7f7f7f;
-    border: 0 none;
-    border-radius: 0;
-    color: #c1c1c1;
-    /*padding: 13px 20px;*/
-    position: relative;
-    overflow: hidden;
-    right: 0;
-    top: 0;
-    margin-bottom: 50px;
-    padding-bottom: 40px;
-}
-
-.submit-icon .fa-paper-plane {
-    position: relative;
-    top: 0;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transition: all 0.3s ease 0.2s;
-    -moz-transition: all 0.3s ease 0.2s;
-    -ms-transition: all 0.3s ease 0.2s;
-    -o-transition: all 0.3s ease 0.2s;
-    transition: all 0.3s ease 0.2s;
-}
-
-.submit-icon:hover .fa-paper-plane {
-    position: relative;
-    top: -37px;
-    -webkit-transform: translateX(30px);
-    -moz-transform: translateX(30px);
-    -ms-transform: translateX(30px);
-    -o-transform: translateX(30px);
-    transform: translateX(30px);
-}
 
 .footer-content .footer-social, .newUserNavbar {
     margin: 40px 0 35px;
@@ -459,26 +354,78 @@ a, a:hover, a:focus, .btn:focus {
 .copyright{
   text-align: center;
   padding: 10px;
-  background-color: #222222;
+  /*background-color: #222222;*/
 }
 
 /*==================================*/
 /*index*/
 /*==================================*/
 
-.aboutTitle{
-  font-size: 60px;
-  text-align: center;
-  margin: 20px;
-  padding: 20px;
-  /*height: 25vh;*/
 
+
+/*==================================*/
+/*contact us*/
+/*==================================*/
+#contactIndex{
+  padding: 20px;
+  margin:20px;
 }
+
+.messageUs {
+    /*color: #009EE3;*/
+    padding-top: 30px;
+}
+
+#contact {
+    height: 80vh;
+}
+
+.input-field {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border: 1px solid #ececec;
+    border-radius: 0;
+    box-shadow: none;
+    color: #818181;
+    font-size: 16px;
+    height: 50px;
+}
+
+textarea.form-control {
+    width: 100%;
+    height: 165px;
+}
+
+.contact-details, h3 {
+    border-bottom: 1px solid #008ecc;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contact-details p {
+    line-height: 30px;
+}
+
+.contact-details p i {
+    margin-right: 10px;
+}
+
+.contact-details span {
+    display: block;
+    margin-left: 24px;
+}
+
+
 
 
 /*============================*/
 /*About us*/
 /*============================*/
+
 
 .aboutTitle{
   padding: 20px;
