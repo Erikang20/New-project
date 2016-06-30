@@ -140,8 +140,22 @@
 </ol>
 
 <!-- Wrapper for slides -->
+
 <div class="carousel-inner" role="listbox">
-  <div class="item active">
+	<%for(var i=0; i<dogs.length; i++){%>
+		<%if(i===0){%>
+	<div class="item active">
+		<%}else{%>
+			<div class="item">
+				<%}%>
+		<img class="carousel-img" src=<%=dogs[i].dog_img%> alt="" />
+		<div class="carousel-caption">
+			<h3><%=dogs[i].dog_name%></h3>
+			<p><%=dogs[i].dog_desc%></p>
+		</div>
+	</div>
+	<%}%>
+  <!-- <div class="item active">
     <img class="carousel-img" src="https://images.unsplash.com/photo-1452447224378-04c089d77aa4?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1150" alt="dog">
     <div class="carousel-caption">
       <h3>Dogs</h3>
@@ -171,7 +185,7 @@
       <h3>Innocence</h3>
       <p>The best friend anyone can ever have</p>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <!-- Left and right controls -->
