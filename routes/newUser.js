@@ -20,6 +20,7 @@ router.get( '/', function( req, res, next ) {
 router.post( '/', function( req, res ) {
 	var user = req.body;
 	// eval( locus )
+	console.log( user );
 	knex( 'users' ).where( "user_name", user.user_name ).then( function( result, err ) {
 		if ( result.length === 0 ) {
 			knex( 'users' ).insert( {

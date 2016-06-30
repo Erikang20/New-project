@@ -37,6 +37,7 @@
 
       <%# bootstrap%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
 
     <%# fontawesome%>
     <script src="https://use.fontawesome.com/405a0adae2.js"></script>
@@ -52,9 +53,9 @@
 <%# ===================================%>
 
 <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header new-user-header">
-        <div class="container new-user-header">
-          <div class="navbar-header scrollContainer destination0">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div class="container new-user-header">
+      <div class="navbar-header scrollContainer destination0">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -74,7 +75,7 @@
       <li class="nav-item"><a class= "navbar-link" href="/">Home</a></li>
         <li class="nav-item"><a class="navbar-link" href="/">About us</a></li>
           <li class="nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
-            <li class="nav-item"><a class="navbar-link support transition" href="#contactIndex">Contact Us</a></li>
+            <li class="nav-item"><a class="navbar-link support transition" href="/">Contact Us</a></li>
             <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
         </ul>
       </nav>
@@ -96,34 +97,33 @@
 <%# login session%>
 <%# ===================================%>
 
-  <div class="row newUser center-align">
-
+<div class="row newUser center-align">
     <h1 class="newusertitle">Welcome</h1>
 
       <form class="center-align" action="/newUser" method="POST">
 
-        <div class="center-align">
+        <div class="row center-align">
           <div class="input-field col s6 newuserform center-align">
             <label for="full_name"><i class="material-icons center-align">face</i></label>
             <input placeholder="Full Name" id="full_name" type="text" class="validate" name="full_name">
           </div>
         </div>
 
-              <div class="center-align">
-                <div class="input-field col s6 newuserform">
-                    <label for="user_name"><i class="material-icons newuser-icon">account_circle</i></label>
+              <div class="row center-align">
+                <div class="input-field col s6 newuserform center-align">
+                    <label for="user_name"><i class="material-icons center-align">account_circle</i></label>
                       <input placeholder="Username" id="user_name" type="text" class="validate" name="user_name">
                 </div>
               </div>
 
-                <div class="center-align">
+                <div class="row center-align">
                   <div class="input-field col s6 newuserform center-align">
-                    <label for="password"><i class="material-icons newuser-icon">lock</i></label>
+                    <label for="password"><i class="material-icons center-align">lock</i></label>
                     <input placeholder="password" id="password" type="password" class="validate" name="password">
                   </div>
                 </div>
 
-                    <div class="center-align">
+                    <div class="row center-align">
                       <div class="input-field col s6 newuserform center-align">
                         <label for="email"><i class="material-icons newuser-icon">email</i></label>
                         <input placeholder="email" id="email" type="email" class="validate" name="email">
@@ -136,10 +136,9 @@
 
                          <h5>Or</h5>
                           <a href="/auth/facebook">Login with facebook</a>
-          </form>
-          <a href="/auth/facebook">Login with facebook</a>
 
-      </div>
+                        </form>
+                        </div>
 
 
 <%# ===================================%>

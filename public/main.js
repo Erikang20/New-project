@@ -26,3 +26,13 @@ $( window ).scroll( function() {
 		$( "#navigation" ).addClass( "animated-header" );
 	}
 } );
+
+// ==============================================
+// carrousel
+// ==============================================
+// $( document ).ready( function( carousel ) {
+// 	$( '.carousel' ).carousel( {
+// 		interval: 3000
+//
+// 	} )
+// } );
