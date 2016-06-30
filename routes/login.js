@@ -13,7 +13,7 @@ router.get( '/', function( req, res, next ) {
 
 router.post( '/', passport.authenticate( 'local', {
 	successRedirect: '/', // redirect to the secure profile section
-	failureRedirect: '/blahblah' // redirect back to the signup page if there is an error
+	failureRedirect: '/login' // redirect back to the signup page if there is an error
 } ) );
 
 
