@@ -104,7 +104,7 @@ passport.use( new LocalStrategy( {
 passport.use( new FacebookStrategy( {
 		clientID: process.env.FACEBOOK_APP_ID,
 		clientSecret: process.env.FACEBOOK_APP_SECRET,
-		callbackURL: "https:/puppylink.herokuapp.com/auth/facebook/callback"
+		callbackURL: "https://puppylink.herokuapp.com/auth/facebook/callback"
 			// scope: [ 'r_emailaddress', 'r_basicprofile' ],
 
 	},
@@ -176,7 +176,6 @@ app.get( '/auth/facebook',
 );
 
 // CALLBACK URL
-// localhost:3000/login/facebook/return
 app.get( '/auth/facebook/callback',
 	passport.authenticate( 'facebook', {
 		failureRedirect: '/login'
