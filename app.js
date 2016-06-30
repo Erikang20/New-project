@@ -52,13 +52,6 @@ app.use( passport.session() );
 // Configure Passport authenticated session persistence for Facebook.
 // ------------------------------------------------------------------
 
-passport.serializeUser( function( user, cb ) {
-	cb( null, user.id );
-} );
-
-passport.deserializeUser( function( user, cb ) {
-	cb( null, user );
-} );
 
 // ------------------------------------------------------------------
 // Initialize Passport and restore authentication state, if any, from the
@@ -111,15 +104,14 @@ passport.use( new LocalStrategy( {
 passport.use( new FacebookStrategy( {
 		clientID: process.env.FACEBOOK_APP_ID,
 		clientSecret: process.env.FACEBOOK_APP_SECRET,
-		callbackURL: "http://localhost:3000/auth/facebook/callback",
-		// scope: [ 'r_emailaddress', 'r_basicprofile' ],
-		enableProof: true
+		callbackURL: "http://localhost:3000/auth/facebook/callback"
+			// scope: [ 'r_emailaddress', 'r_basicprofile' ],
 
 	},
 	function( accessToken, refreshToken, profile, cb ) {
 
-
-		knex( 'users' ).where( "user_name", profile.id ).then( function( result, err ) {
+		console.log( profile );
+		knex( 'users' ).where( "user_name", profile.id ).first().then( function( result, err ) {
 			console.log( result );
 			if ( result.length === 0 ) {
 				console.log( "I'm here" );
@@ -129,16 +121,23 @@ passport.use( new FacebookStrategy( {
 					email: 'facebook',
 					password: null
 				} ).then( function( result, err ) {
-					cb( null, profile );
+					console.log( result );
+					cb( null, result );
 				} )
 			} else {
-				console.log( "Username already exists" );
-				cb( null, profile );
+				cb( null, result );
 			}
 		} )
 	}
 ) );
 
+passport.serializeUser( function( user, cb ) {
+	cb( null, user );
+} );
+
+passport.deserializeUser( function( user, cb ) {
+	cb( null, user );
+} );
 
 // -------------------------------
 // routes
@@ -197,4 +196,4 @@ app.listen( port, function() {
 
 module.exports = {
 	app
-};;
+};;;
