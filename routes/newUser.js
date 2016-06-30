@@ -34,9 +34,7 @@ router.post( '/', function( req, res ) {
 			} ).then( function( result, err ) {
 				res.redirect( '/login' ); // Change redirect to login. -- Dax :3
 			} );
-		} else {
-			alert( 'Username taken' );
-		}
+		} else {}
 	} );
 } );
 
