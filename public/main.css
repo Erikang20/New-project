@@ -556,3 +556,19 @@ background-color: #222222;
 .social-links{
     text-align: center;
 }
+
+/*==================================*/
+/*profile page*/
+/*==================================*/
+
+.profile{
+  padding: 70px;
+  margin: 70px;
+}
+
+.profile-title{
+
+  padding: 30px;
+  margin: 30px;
+
+}

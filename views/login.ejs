@@ -97,21 +97,9 @@
       <form class="login-form col s12 form" action="/newUser" method="POST">
         <div class="row">
 
-<!-- <<<<<<< HEAD
-            <form id="existingUserInput" class="form" action="/login" method="POST">
-              <div class="form-group">
-                <label for="userName">Username</label>
-                  <input id="userName" type="text" name="user_name" class="form-control" placeholder="Username">
-                  </div>
-
-
-                    <div class="form-group">
-                      <input  id="password" type="password" name="password" class="form-control" placeholder="Password">
-                        <button id="login" type="submit" action="about.html" value="Go to about.html" class="btn btn-primary signIn">Sign in</button>
-======= -->
               <div class="row">
                 <div class="input-field col s6">
-                    <label for="userName"><i class="material-icons">account_circle</i>  User Name</label>
+                    <label for="user_name"><i class="material-icons">account_circle</i>  User Name</label>
                       <input placeholder="Username" id="user_name" type="text" class="validate">
                 </div>
               </div>
@@ -128,23 +116,10 @@
                     <i class="material-icons right"></i>
                   </button>
 
-
-
-                  <%# ----------------------------------%>
-                  <%# Facebook login button%>
-                  <%# ----------------------------------%>
-                  <%# <button id="facebook" class="btn facebook-button" type="submit" name="action">Login with
-                   </button>
-                 </form>
-               </div>
-             </div>%>
-
-             <a href="/auth/facebook">login with Facebook</a>
-
-
-<%# <a href="/auth/facebook"><i class="fa fa-facebook" aria-hidden="true">Login with Facebook</i></a>%>
-
-
+                  <a href="/auth/facebook">Login with Facebook</a>
+                </div>
+              </form>
+            </div>
 
 
 <%# ===================================%>

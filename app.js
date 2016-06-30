@@ -48,9 +48,9 @@ app.use( cookieSession( {
 app.use( passport.initialize() );
 app.use( passport.session() );
 
-// ---------------------------------
+// ------------------------------------------------------------------
 // Configure Passport authenticated session persistence for Facebook.
-// ---------------------------------
+// ------------------------------------------------------------------
 
 passport.serializeUser( function( user, cb ) {
 	cb( null, user.id );
@@ -60,10 +60,10 @@ passport.deserializeUser( function( user, cb ) {
 	cb( null, user );
 } );
 
-// -------------------------------
+// ------------------------------------------------------------------
 // Initialize Passport and restore authentication state, if any, from the
 // session.
-// -------------------------------
+// ------------------------------------------------------------------
 
 // passport.serializeUser( function( user, done ) {
 // 	//later this will be where you selectively send to the browser an identifier for your user, like their primary key from the database, or their ID from linkedin
@@ -138,11 +138,6 @@ passport.use( new FacebookStrategy( {
 		} )
 	}
 ) );
-
-
-
-
-
 
 
 // -------------------------------
