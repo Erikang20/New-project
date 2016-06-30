@@ -8,4 +8,8 @@ module.exports = {
 			database: 'puppylink'
 		}
 	},
+	production: {
+		client: 'postgresql',
+		connection: process.env.DATABASE_URL
+	}
 };

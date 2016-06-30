@@ -32,9 +32,7 @@ router.post( '/', function( req, res ) {
 			} ).then( function( result, err ) {
 				res.redirect( '/newUser' );
 			} );
-		} else {
-			alert( 'Username taken' );
-		}
+		} else {}
 	} );
 } );
 
