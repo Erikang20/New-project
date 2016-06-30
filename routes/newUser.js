@@ -30,7 +30,7 @@ router.post( '/', function( req, res ) {
 				email: user.email,
 				img: 'https://www.placecage.com/c/400/400'
 			} ).then( function( result, err ) {
-				res.redirect( '/newUser' );
+				res.redirect( '/login' ); // Change redirect to login. -- Dax :3
 			} );
 		} else {
 			alert( 'Username taken' );

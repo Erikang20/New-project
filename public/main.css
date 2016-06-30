@@ -254,8 +254,6 @@ a, a:hover, a:focus, .btn:focus {
 }
 
 
-
-
 /*============================*/
 /*End of Header*/
 /*============================*/
@@ -290,27 +288,6 @@ a, a:hover, a:focus, .btn:focus {
 /*end of Parallax*/
 /*============================*/
 
-
-/*============================*/
-/*About us*/
-/*============================*/
-
-.aboutTitle{
-  padding: 40px;
-  margin:30px;
-}
-
-.aboutus{
-  text-align: center;
-
-}
-
-.middleContent{
-  font-family: 'Cormorant Infant', serif;
-  font-size: 20px;
-  padding: 20px;
-  margin: 20px;
-}
 
 /*============================*/
 /*Social*/
@@ -498,19 +475,56 @@ a, a:hover, a:focus, .btn:focus {
 
 }
 
+
+/*============================*/
+/*About us*/
+/*============================*/
+
+.aboutTitle{
+  padding: 20px;
+  margin:30px;
+  font-family: 'Shadows Into Light', cursive;
+  color: #003049;
+
+}
+
+.middleContent{
+  font-family: 'Cormorant Infant', serif;
+  font-size: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.aboutus{
+  text-align: center;
+
+}
+
+
 .team {
     font-size: 60px;
     margin: 30px;
     padding: 60px;
-    color: #009EE3;
+    color: #003049;
     height: 25vh;
+    font-family: 'Shadows Into Light', cursive;
+
 }
 
 
-
-#jack, #erika, #aaron{
-  height: 200px;
+#jack{
+  height: 250px;
   width: auto;
+  padding:10px;
+}
+
+#erika, #aaron{
+  align-items: center;
+  position: relative;
+  left: 120px;
+  height: 250px;
+  width: auto;
+  padding:10px;
 }
 
 
@@ -566,6 +580,11 @@ background-color: #222222;
   margin: 70px;
 }
 
+#user-img{
+  height: 250px;
+  width: auto;
+}
+
 .profile-title{
   font-family: 'Shadows Into Light', cursive;
   font-size: 40px;
@@ -587,7 +606,7 @@ background-color: #222222;
 
 .item{
   display: block;
-  width: 100%;
+  width: auto;
   height: 400px;
 }
 

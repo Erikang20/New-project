@@ -73,10 +73,12 @@
 <nav class="collapse navbar-collapse navbar-right" role="navigation">
    <ul id="nav" class="nav navbar-nav">
       <li class="nav-item"><a class= "navbar-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="navbar-link" href="/">About us</a></li>
+        <li class="nav-item"><a class="navbar-link" href="/#aboutUs">About us</a></li>
           <li class="nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
-            <li class="nav-item"><a class="navbar-link support transition" href="/">Contact Us</a></li>
+            <li class="nav-item"><a class="navbar-link support transition" href="/#aboutUs">Contact Us</a></li>
             <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
+            <li class="nav-item"><a class= "navbar-link" href="#">Log Out</a></li>
+
         </ul>
       </nav>
 
@@ -100,10 +102,10 @@
 <div class="row newUser center-align">
     <h1 class="newusertitle">Welcome</h1>
 
-      <form class="center-align" action="/newUser" method="POST">
+      <form class="center-align col s6 offset-s3" action="/newUser" method="POST">
 
         <div class="row center-align">
-          <div class="input-field col s6 newuserform center-align">
+          <div class="input-field  newuserform center-align">
             <label for="full_name"><i class="material-icons center-align">face</i></label>
             <input placeholder="Full Name" id="full_name" type="text" class="validate" name="full_name">
           </div>
@@ -135,7 +137,9 @@
                         </button>
 
                          <h5>Or</h5>
-                          <a href="/auth/facebook">Login with facebook</a>
+                          <a href="/auth/facebook" class="waves-effect waves-light btn blue">
+                            Login with facebook <i class="large material-icons">thumb_up</i> 
+                          </a>
 
                         </form>
                         </div>

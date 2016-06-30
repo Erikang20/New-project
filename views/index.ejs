@@ -12,8 +12,7 @@
    <link href="/main.css" rel="stylesheet" type="text/css">
 
    <%# google Fonts%>
-   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans|Shadows+Into+Light" rel="stylesheet">
     <title>Puppylink</title>
 
     <%# jquery before everything%>
@@ -25,10 +24,10 @@
 
       <%# materialize%>
       <%# Compiled and minified CSS %>
-     <%# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">%>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
      <%# Compiled and minified JavaScript %>
-     <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>%>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
     <%# Google Icons%>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -74,6 +73,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
             <h1 class="logoName">PuppyLink</h1>
           </div>
 
@@ -83,28 +83,31 @@
 
   <nav class="collapse navbar-collapse navbar-right" role="navigation">
       <ul id="nav" class="nav navbar-nav">
-          <li class="active nav-item"><a class= "navbar-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="navbar-link" href="/#aboutUs">About us</a></li>
+          <li class="nav-item"><a class= "navbar-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="navbar-link" href="/#aboutUs">About Us</a></li>
           <li class="nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
-          <li class="nav-item"><a class="navbar-link support transition" href="#contactIndex">Contact Us</a></li>
+          <li class="nav-item"><a class="navbar-link support transition" href="/#aboutUs">Contact Us</a></li>
           <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
+          <li class="nav-item"><a class= "navbar-link" href="#">Log Out</a></li>
+          <div class="weather"><img src="#" class="weather">current weather</div>
+
         </ul>
-  </nav>
+      </nav>
 <%# ===================================%>
 <%# End of main nav %>
 <%# ===================================%>
-</div>
-   </header>
+  </div>
+</header>
 
 <%# ===================================%>
 <%# end of the header and top navigation%>
 <%# ===================================%>
 
 
+
 <%# ===================================%>
 <%# parallax section%>
 <%# ===================================%>
-
 
 <section class="content-holder" style="opacity: 1; transform: translateY(20px);">
   <div class="parallax-window" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1414277578841-112f6e9398ec?crop=entropy&fit=crop&fm=jpg&h=800&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1325"></div>
@@ -117,7 +120,6 @@
 
 <section id="aboutUs" >
       <div class="container">
-          <%# <div class="col-md-8 wow animated fadeInLeft scrollContainer destination25">%>
             <div class="aboutTitle animated infinite jello">About us</div>
               <div class="content">
                 <p class="middleContent">
@@ -130,10 +132,9 @@
                 You can also create a personal profile for you and your dog, and add a list of preferences where you can describe everything about your dog, preferences on food, treats, toys, places to go off leash.
                 In addition, you can find a social calendar with puppy friendly activities around town, take him/her for a walk, grab a beer with your friends, or if you prefer arrange a puppy play date with other dog’s that have similar characteristics than your dog and are also in the puppy networking.
                 </p>
-              <a href="#">Read more</a>
+              <a href="/#theTeam">Meet the team</a>
             </div>
           </div>
-        <%# </div>%>
     </section>
 
 <%# ===================================%>
@@ -160,12 +161,12 @@
 
   <div id="theTeam">
     <div class="container-fluid">
-        <div class="row">
+        <%# <div class="row">%>
             <div class="sec-title text-center">
                 <h1 class="wow animated bounceInLeft team">The team</h1>
                     </div>
 
-                        <div class="col-sm-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                        <div class="col-xs-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.3s">
                           <div class="thumbnail">
                             <img id="jack" src="./img/jack.jpg" class="img-responsive" alt="responsive image">
                               <h1 class="jack">Jackson</h1>
@@ -175,7 +176,7 @@
                           </div>
                         </div>
 
-                          <div class="col-sm-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                          <div class="col-xs-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.6s">
                             <div class="thumbnail">
                               <div class="erika">
                                 <img id="erika" src="./img/erika.jpg" class="img-responsive" alt="responsive image">
@@ -186,7 +187,7 @@
                             </div>
                           </div>
 
-                              <div class="col-sm-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.10s">
+                              <div class="col-xs-6 col-md-4 text-center wow animated zoomIn" data-wow-delay="0.10s">
                                 <div class="thumbnail">
                                   <div class="aaron">
                                     <img id="aaron" src="./img/aaron.jpg" class="img-responsive" alt="responsive image">
@@ -197,7 +198,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          <%# </div>%>
                         </div>
 
 
@@ -227,6 +228,55 @@
 <%# ===================================%>
 <%# end Social section %>
 <%# ===================================%>
+
+
+<%# ===================================%>
+<%# contact us%>
+<%# ===================================%>
+
+
+<section id="contactIndex" >
+  <div class="container">
+    <div class="row">
+
+      <div class="sec-title text-center wow animated fadeInDown">
+        <h2 class="messageUs">Contact Us</h2>
+        <p>Leave us a Message</p>
+      </div>
+
+
+      <div class="col-md-7 contact-form wow animated fadeInLeft">
+        <form action="form" method="get">
+          <div class="input-field">
+            <input type="text" name="name" class="form-control" placeholder="Your Name...">
+          </div>
+
+            <div class="input-field">
+              <input type="email" name="email" class="form-control" placeholder="Your Email...">
+            </div>
+
+                <div class="input-field">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject...">
+                </div>
+
+                  <div class="input-field">
+                    <textarea name="message" class="form-control messageIndex" placeholder="Messages..."></textarea>
+                  </div>
+                    <button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
+        </form>
+      </div>
+
+      <div class="col-md-5 wow animated fadeInRight">
+        <address class="contact-details">
+          <h3>Email us</h3>
+          <p><i class="fa fa-envelope"></i>puppyLink@gmail.com</p>
+        </address>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
 <%# ===================================%>
