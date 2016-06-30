@@ -37,6 +37,7 @@
 
       <%# bootstrap%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" charset="utf-8"></script>
 
     <%# fontawesome%>
     <script src="https://use.fontawesome.com/405a0adae2.js"></script>
@@ -100,33 +101,33 @@
 
     <h1 class="newusertitle">Welcome</h1>
 
-      <form class="center-align" action="/users" method="POST">
+      <form class="center-align" action="/newUser" method="POST">
 
         <div class="center-align">
           <div class="input-field col s6 newuserform center-align">
             <label for="full_name"><i class="material-icons center-align">face</i></label>
-            <input placeholder="Full Name" id="full_name" type="text" class="validate">
+            <input placeholder="Full Name" id="full_name" type="text" class="validate" name="full_name">
           </div>
         </div>
 
               <div class="center-align">
                 <div class="input-field col s6 newuserform">
                     <label for="user_name"><i class="material-icons newuser-icon">account_circle</i></label>
-                      <input placeholder="Username" id="user_name" type="text" class="validate">
+                      <input placeholder="Username" id="user_name" type="text" class="validate" name="user_name">
                 </div>
               </div>
 
                 <div class="center-align">
                   <div class="input-field col s6 newuserform center-align">
                     <label for="password"><i class="material-icons newuser-icon">lock</i></label>
-                    <input placeholder="password" id="password" type="password" class="validate">
+                    <input placeholder="password" id="password" type="password" class="validate" name="password">
                   </div>
                 </div>
 
                     <div class="center-align">
                       <div class="input-field col s6 newuserform center-align">
                         <label for="email"><i class="material-icons newuser-icon">email</i></label>
-                        <input placeholder="email" id="email" type="email" class="validate">
+                        <input placeholder="email" id="email" type="email" class="validate" name="email">
                       </div>
                     </div>
 
