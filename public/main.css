@@ -291,7 +291,7 @@ a, a:hover, a:focus, .btn:focus {
 }
 
 .footer-content {
-    width: 390px;
+    /*width: 390px;*/
     margin: 0 auto;
 }
 
@@ -372,8 +372,10 @@ a, a:hover, a:focus, .btn:focus {
 }
 
 .messageUs {
-    /*color: #009EE3;*/
-    padding-top: 30px;
+    padding-bottom: 20px;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 20px;
+
 }
 
 #contact {
@@ -414,12 +416,10 @@ textarea.form-control {
     margin-right: 10px;
 }
 
-.contact-details span {
+/*.contact-details span {
     display: block;
     margin-left: 24px;
-}
-
-
+}*/
 
 
 /*============================*/
@@ -428,10 +428,12 @@ textarea.form-control {
 
 
 .aboutTitle{
-  padding: 20px;
+  padding: 20px 10px;
   margin:30px;
   font-family: 'Shadows Into Light', cursive;
+  font-size: 70px;
   color: #003049;
+  text-align: center;
 
 }
 
