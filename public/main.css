@@ -423,12 +423,20 @@ textarea.form-control {
 /*==================================*/
 
 
-.newUser, .login-title{
+.newUser{
   margin: 90px;
   padding: 90px;
   clear: both;
   justify-content: center;
 
+}
+
+.login-title{
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  font-size: 70px;
+  padding-top: 70px;
+  margin-top: 100px;
 
 }
 
@@ -463,7 +471,7 @@ background-color: #222222;
 }
 
 /*==================================*/
-/*profile page*/
+/* page*/
 /*==================================*/
 
 .profile{
@@ -513,6 +521,11 @@ background-color: #222222;
 
 
 .users_profile{
-  margin:200px;
-  padding:200px;
+  margin-top:100px;
+  padding:100px 10px;
+  text-align: center;
+}
+
+.users_view{
+  font-size: 20px;
 }

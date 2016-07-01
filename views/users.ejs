@@ -4,36 +4,47 @@
       <% include ./header %>
     </head>
 
+    <h1 class="users_profile">Active users</h1>
 
-    <%if(thisUser.is_admin){%>
-      <div class="profile thumbnail users_profile">
+    <table class="highlight responsive-table bordered centered users_view">
+        <thead class="center-align">
+          <tr>
+              <th>Name</th>
+              <th>User Name</th>
+              <th>Delete</th>
 
-  				<%for(var i=0; i<users.length; i++){%>
-            <ul class="collection users_profile">
-            <li class="collection-item avatar">
-              <i class="fa fa-user fa-3x" aria-hidden="true"></i>
-              <span class="title"></span>
-              <p><%=users[i].full_name%></p>
-              <p><%=users[i].user_name%></p>
-							<form class="" action="/users/<%=users[i].id%>/?_method=DELETE" method="POST">
-              <button class="delete btn btn-danger" type='submit'><i class="fa fa-trash-o fa-lg">Delete</i></button>
-						</form>
+          </tr>
+        </thead>
+        <tbody class="center-align">
+            <tr>
 
-            </li>
+          <%if(thisUser.is_admin){%>
+            <%for(var i=0; i<users.length; i++){%>
 
-            </ul>
+            <td><a href="/users/<%=users.id%>"><%=users[i].full_name%></td>
+            <td><%=users[i].user_name%></td>
+            <td>
+              <form class="" action="/users/<%=users[i].id%>/?_method=DELETE" method="POST">
+                 <button class="delete btn btn-danger" type='submit'><i class="fa fa-trash-o fa-lg">Delete</i></button>
+               </form>
+            </td>
 
 
+              </tr>
+              <%}%>
+
+            <%}else{%><h1>This is for admins only</h1>
+
+            <%}%>
+
+
+
+        </tbody>
+      </table>
 
 
          </div>
-  			 <%}%>
-  	<%}else{%><h1>This is for admins only</h1>
 
-
-      	<%}%>
-
-</div>
 
 
   <footer>
