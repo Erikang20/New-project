@@ -1,5 +1,6 @@
 // parallax section
 // ------------------------------------------
+
 $( document ).ready( function( parallax ) {
 
 	$( window ).trigger( 'scroll' );
@@ -9,7 +10,6 @@ $( document ).ready( function( parallax ) {
 	} );
 	console.log( "it works" );
 } );
-
 
 
 $( window ).load( function() {
