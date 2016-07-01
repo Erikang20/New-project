@@ -217,9 +217,9 @@ a, a:hover, a:focus, .btn:focus {
 /*============================*/
 
 
-#footer {
-    padding: 70px 0;
-    color: #fff;
+.page-footer {
+    /*padding: 70px 0;*/
+    background-color: #2e363d;
 }
 
 .footer-content {
@@ -229,6 +229,7 @@ a, a:hover, a:focus, .btn:focus {
 
 .footer-content> div {
     margin-bottom: 40px;
+
 }
 
 .footer-content> div> p:first-child {
@@ -257,6 +258,8 @@ a, a:hover, a:focus, .btn:focus {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #2e363d;
+
 }
 
 .footer-social ul li {
@@ -285,9 +288,10 @@ a, a:hover, a:focus, .btn:focus {
 
 .copyright{
   text-align: center;
-  padding: 10px;
-  /*background-color: #222222;*/
+  padding: 20px;
+  /*background-color: #2e363d;*/
 }
+
 
 /*==================================*/
 /*index*/
