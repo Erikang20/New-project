@@ -308,8 +308,7 @@ a, a:hover, a:focus, .btn:focus {
     font-family: 'Shadows Into Light', cursive;
     font-size: 60px;
     color: #003049;
-
-
+    background-color: white;
 }
 
 #contact {
@@ -420,9 +419,9 @@ textarea.form-control {
 /*==================================*/
 
 
-.newUser{
-  margin: 100px;
-  padding: 100px;
+.newUser, .login-title{
+  margin: 90px;
+  padding: 90px;
   clear: both;
   justify-content: center;
 

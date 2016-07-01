@@ -11,8 +11,6 @@
    <%# css stylesheet%>
    <link href="/main.css" rel="stylesheet" type="text/css">
 
-   <%# google Fonts%>
-   <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans" rel="stylesheet">
 
     <title>Puppylink</title>
 
@@ -20,19 +18,23 @@
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 
       <%# js%>
-     <script type="text/javascript" src="./main.js"></script>
      <script src="/main.js"></script>
 
-      <%# materialize%>
-      <%# Compiled and minified CSS %>
-     <%# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">%>
-
-     <%# Compiled and minified JavaScript %>
-     <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>%>
 
     <%# Google Icons%>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+      <%# google Fonts%>
+      <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Josefin+Sans|Shadows+Into+Light" rel="stylesheet">
+
+
+      <%# materialize%>
+      <%# Compiled and minified CSS %>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+     <%# Compiled and minified JavaScript %>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
       <%# bootstrap%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -74,6 +76,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
             <h1 class="logoName">PuppyLink</h1>
           </div>
 
@@ -83,18 +86,21 @@
 
   <nav class="collapse navbar-collapse navbar-right" role="navigation">
       <ul id="nav" class="nav navbar-nav">
-          <li class="active nav-item"><a class= "navbar-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="navbar-link" href="/#aboutUs">About us</a></li>
+          <li class="nav-item"><a class= "navbar-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="navbar-link" href="/#aboutUs">About Us</a></li>
           <li class="nav-item"><a class="navbar-link" href="/newUser">New Users</a></li>
-          <li class="nav-item"><a class="navbar-link support transition" href="#contactIndex">Contact Us</a></li>
+          <li class="nav-item"><a class="navbar-link support transition" href="/#contactIndex">Contact Us</a></li>
           <li class="nav-item"><a class= "navbar-link" href="/login">Log In</a></li>
+          <li class="nav-item"><a class= "navbar-link" href="#">Log Out</a></li>
+          <div class="weather"><img src="#" class="weather">current weather</div>
+
         </ul>
-  </nav>
+      </nav>
 <%# ===================================%>
 <%# End of main nav %>
 <%# ===================================%>
-</div>
-   </header>
+  </div>
+</header>
 
 <%# ===================================%>
 <%# end of the header and top navigation%>
