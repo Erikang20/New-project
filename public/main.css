@@ -1,7 +1,4 @@
-*{
-  margin:0;
 
-}
 
 a, a:hover, a:focus, .btn:focus {
     text-decoration: none;
@@ -220,6 +217,7 @@ a, a:hover, a:focus, .btn:focus {
 .page-footer {
     /*padding: 70px 0;*/
     background-color: #2e363d;
+    text-align: center;
 }
 
 .footer-content {
@@ -258,12 +256,15 @@ a, a:hover, a:focus, .btn:focus {
     list-style: outside none none;
     margin: 20px;
     padding: 10px;
-    position: relative;
-    left: 120px;
+    /*position: relative;*/
+    /*left: 120px;*/
     text-align: center;
     clear: both;
-    /*text-align: center;*/
 
+}
+
+.social-icon{
+  padding: 20px;
 }
 
 
@@ -278,9 +279,8 @@ ul li a:hover {
 
 .copyright{
   display: inline-flex;
-  padding: 20px;
+  /*padding: 20px;*/
   text-align: center;
-  /*background-color: #2e363d;*/
 }
 
 
