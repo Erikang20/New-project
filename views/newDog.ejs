@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./header %>
+  </head>
+
+<%# ===================================%>
+<%# login session%>
+<%# ===================================%>
+
+<div class="row newUser center-align">
+    <h1 class="newusertitle">Welcome</h1>
+
+      <form class="center-align col s6 offset-s3" action="/profile/newDog" method="POST">
+
+        <div class="row center-align">
+          <div class="input-field col s6 offset-s3 newuserform center-align">
+            <label for="full_name"><i class="material-icons center-align">face</i></label>
+            <input placeholder="Dog Name" id="name" type="text" class="validate" name="name">
+          </div>
+        </div>
+
+              <div class="row center-align">
+                <div class="input-field col s6 offset-s3 newuserform center-align">
+                    <label for="user_name"><i class="material-icons center-align">account_circle</i></label>
+                      <input placeholder="description" id="description" type="text" class="validate" name="description">
+                </div>
+              </div>
+
+                <div class="row center-align">
+                  <div class="input-field col s6 offset-s3 newuserform center-align">
+                    <label for="password"><i class="material-icons center-align">lock</i></label>
+                    <input placeholder="breed" id="breed" type="text" class="validate" name="breed">
+                  </div>
+                </div>
+
+                    <div class="row center-align">
+                      <div class="input-field col s6 offset-s3 newuserform center-align">
+                        <label for="email"><i class="material-icons newuser-icon">email</i></label>
+                        <input placeholder="age" id="age" type="text" class="validate" name="age">
+                      </div>
+                    </div>
+
+                      <button class="btn waves-effect waves-light newUserButton newuser-icon indigo darken-4" type="submit" name="action">Submit
+                          <i class="material-icons right">send</i>
+                        </button>
+
+
+
+                        </form>
+                        </div>
+
+      <footer>
+        <% include ./footer %>
+      </footer>
+
+  </body>
+</html>

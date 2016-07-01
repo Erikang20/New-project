@@ -32,6 +32,40 @@ router.get( '/', function( req, res, next ) {
 		} );
 	} );
 } );
+router.post( '/newDog', function( req, res ) {
+	var user = req.body;
+	console.log( user );
+	knex( 'dogs' ).insert( {
+		name: user.name,
+		age: user.age,
+		breed: user.breed,
+		description: user.description,
+		dog_img: "https://www.placecage.com/c/800/400",
+		owner: req.session.passport.user.id
+	} ).then( function( result, err ) {
+		var doggos = [];
+		knex( 'users' ).where( 'users.id', req.session.passport.user.id ).innerJoin( 'dogs', 'users.id', 'dogs.owner' ).then( function( result, err ) {
+			console.log( result );
+			for ( var i = 0; i < result.length; i++ ) {
+				console.log( i );
+				doggos.push( {
+					dog_name: result[ i ].name,
+					dog_desc: result[ i ].description,
+					dog_img: result[ i ].dog_img
+				} )
+				res.redirect( '/profile' );
+				console.log( doggos[ i ] );
+			}
+		} )
+	} )
+} );
+router.get( '/newDog', function( req, res ) {
+	res.render( 'newDog', {
+		user: req.session.passport.user
+	} )
+} )
+
+
 
 // router.get( '/', function( req, res, next ) {
 // 	res.render( 'profile' );
