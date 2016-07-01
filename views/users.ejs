@@ -14,18 +14,16 @@
               <th>Favorite</th>
               <th>Delete</th>
 
-          </tr>
-        </thead>
-        <tbody class="center-align">
-            <tr>
-
           <%if(thisUser.is_admin){%>
             <%for(var i=0; i<users.length; i++){%>
 
             <td><a href="/users/<%=users.id%>"><%=users[i].full_name%></td>
             <td><%=users[i].user_name%></td>
             <td><a href="#" class="secondary-content"><i class="material-icons">grade</i></a></td>
-            <td><a href="#" class="Delete"action="/?_method_override=DELETE" method="POST"><i class="fa fa-trash-o fa-lg"> Delete</i></a></td>
+            <td><form class="" action="/users/<%=users[i].id%>/?_method=DELETE" method="POST">
+            <button class="delete btn btn-danger" type='submit'><i class="fa fa-trash-o fa-lg">Delete</i></button>
+          </form>
+        </td>
 
               </tr>
               <%}%>

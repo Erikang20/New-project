@@ -1,7 +1,7 @@
 // parallax section
 // ------------------------------------------
 $.ajax( {
-	url: "http://api.wunderground.com/api/d272db6293298224/geolookup/conditions/q/TX/Austin.json",
+	url: "https://api.wunderground.com/api/d272db6293298224/geolookup/conditions/q/TX/Austin.json",
 	dataType: "jsonp",
 	success: function( parsed_json ) {
 		var location = parsed_json[ 'location' ][ 'city' ];

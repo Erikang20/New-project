@@ -7,6 +7,12 @@ var methodOverride = require( 'method-override' );
 
 
 ////show homepage
+router.delete( '/:id', function( req, res ) {
+	knex( 'users' ).where( 'id', req.params.id ).delete().then( function( result, err ) {
+		res.redirect( '/' );
+	} );
+
+} );
 router.get( '/', function( req, res ) {
 	console.log( req.session.passport );
 	knex( 'users' ).select().then( function( result, err ) {
@@ -19,13 +25,5 @@ router.get( '/', function( req, res ) {
 
 
 
-router.get( '/:id', function( req, res ) {
-	knex( 'users' ).where( 'id', req.params.id ).then( function( result, err ) {
-		res.render( 'profile', {
-			user: result,
-			thisUser: req.user
-		} );
-	} );
-} );
 
 module.exports = router;
