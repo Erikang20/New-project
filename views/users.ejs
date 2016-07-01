@@ -4,37 +4,44 @@
       <% include ./header %>
     </head>
 
+    <h1 class="users_profile">Active users</h1>
 
-    <%if(thisUser.is_admin){%>
-      <div class="profile thumbnail users_profile">
+    <table class="highlight responsive-table bordered centered users_view">
+        <thead class="center-align">
+          <tr>
+              <th>Name</th>
+              <th>User Name</th>
+              <th>Favorite</th>
+              <th>Delete</th>
 
-  				<%for(var i=0; i<users.length; i++){%>
-            <ul class="collection users_profile">
-            <li class="collection-item avatar">
-              <i class="fa fa-user fa-3x" aria-hidden="true"></i>
-              <span class="title"></span>
-              <p><%=users[i].full_name%></p>
-              <p><%=users[i].user_name%></p>
-              <a href="#" class="secondary-content"><i class="material-icons">grade</i></a>
-              <a class="btn btn-danger" href="#">
-              <a href="#" class="Delete"action="/?_method_override=DELETE" method="POST"><i class="fa fa-trash-o fa-lg"> Delete</i></a>
+          </tr>
+        </thead>
+        <tbody class="center-align">
+            <tr>
+
+          <%if(thisUser.is_admin){%>
+            <%for(var i=0; i<users.length; i++){%>
+
+            <td><a href="/users/<%=users.id%>"><%=users[i].full_name%></td>
+            <td><%=users[i].user_name%></td>
+            <td><a href="#" class="secondary-content"><i class="material-icons">grade</i></a></td>
+            <td><a href="#" class="Delete"action="/?_method_override=DELETE" method="POST"><i class="fa fa-trash-o fa-lg"> Delete</i></a></td>
+
+              </tr>
+              <%}%>
+
+            <%}else{%><h1>This is for admins only</h1>
+
+            <%}%>
 
 
-            </li>
 
-            </ul>
-
-
+        </tbody>
+      </table>
 
 
          </div>
-  			 <%}%>
-  	<%}else{%><h1>This is for admins only</h1>
 
-
-      	<%}%>
-
-</div>
 
 
   <footer>
