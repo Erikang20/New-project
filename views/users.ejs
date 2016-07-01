@@ -4,21 +4,42 @@
       <% include ./header %>
     </head>
 
-	<%if(thisUser.is_admin){%>
-    <div class="profile thumbnail">
-				<%for(var i=0; i<users.length; i++){%>
-        <h3>Name: <a href="users/<%=users[i].id%>"><%= users[i].full_name %></a></h3>
-        <h3>UserName: <%= users[i].user_name %> </h3>
-       </div>
-			 <%}%>
-	<%}else{%><h1>This is for admins only</h1>}
-	<%}%>
+
+    <%if(thisUser.is_admin){%>
+      <div class="profile thumbnail users_profile">
+
+  				<%for(var i=0; i<users.length; i++){%>
+            <ul class="collection users_profile">
+            <li class="collection-item avatar">
+              <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+              <span class="title"></span>
+              <p><%=users[i].full_name%></p>
+              <p><%=users[i].user_name%></p>
+              <a href="#" class="secondary-content"><i class="material-icons">grade</i></a>
+              <a class="btn btn-danger" href="#">
+              <a href="#" class="Delete"action="/?_method_override=DELETE" method="POST"><i class="fa fa-trash-o fa-lg"> Delete</i></a>
+
+
+            </li>
+
+            </ul>
 
 
 
-  <head>
+
+         </div>
+  			 <%}%>
+  	<%}else{%><h1>This is for admins only</h1>
+
+
+      	<%}%>
+
+</div>
+
+
+  <footer>
     <% include ./footer %>
-  </head>
-  
+  </footer>
+
   </body>
 </html>

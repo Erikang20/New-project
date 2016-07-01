@@ -10,7 +10,7 @@ var methodOverride = require( 'method-override' );
 router.get( '/', function( req, res ) {
 	console.log( req.session.passport );
 	knex( 'users' ).select().then( function( result, err ) {
-		res.render( 'user', {
+		res.render( 'users', {
 			user: result,
 			thisUser: req.user
 		} );
