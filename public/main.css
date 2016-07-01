@@ -184,7 +184,7 @@ a, a:hover, a:focus, .btn:focus {
 }
 
 .social-button li {
-    display: inline-block;
+    display: inline-flex;
 }
 
 .social-button li:nth-child(2) {
@@ -253,31 +253,21 @@ a, a:hover, a:focus, .btn:focus {
     margin: 40px 0 35px;
 }
 
-.footer-social ul {
+.social_footer{
+    display: inline-flex;
     list-style: outside none none;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    left: 120px;
     text-align: center;
-    background-color: #2e363d;
+    clear: both;
+    /*text-align: center;*/
 
 }
 
-.footer-social ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
 
-.footer-social ul li a {
-    color: #7f7f7f;
-    display: inline-block;;
-    -webkit-transition: all 0.2s ease 0s;
-    -moz-transition: all 0.2s ease 0s;
-    -ms-transition: all 0.2s ease 0s;
-    -o-transition: all 0.2s ease 0s;
-    transition: all 0.2s ease 0s;
-}
-
-.footer-social ul li a:hover {
+ul li a:hover {
     color: #009EE3;
 }
 
@@ -287,8 +277,9 @@ a, a:hover, a:focus, .btn:focus {
 }
 
 .copyright{
-  text-align: center;
+  display: inline-flex;
   padding: 20px;
+  text-align: center;
   /*background-color: #2e363d;*/
 }
 
