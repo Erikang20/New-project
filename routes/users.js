@@ -11,11 +11,7 @@ router.get( '/', function( req, res ) {
 	console.log( req.session.passport );
 	knex( 'users' ).select().then( function( result, err ) {
 		res.render( 'users', {
-<<<<<<< HEAD
-			user: result,
-=======
 			users: result,
->>>>>>> fb9b34f74768829d85fd0ffa75d9ca498857a588
 			thisUser: req.user
 		} );
 	} );
