@@ -8,6 +8,7 @@ exports.up = function( knex, Promise ) {
 		table.integer( 'written_by' ).unsigned().index().references( 'users.id' ).onDelete(
 			'CASCADE' );
 
+
 	} );
 };
 
